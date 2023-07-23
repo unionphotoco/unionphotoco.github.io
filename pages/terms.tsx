@@ -128,7 +128,8 @@ const TermsPage: React.FC = (): JSX.Element => {
                     >
                       <Text>
                         Thanks for using our products and services ("Services").
-                        The Services are provided by Habits & Co. DBA ("Union Photo Co.").
+                        The Services are provided by Habits & Co. DBA ("Union
+                        Photo Co.").
                       </Text>
 
                       <Text>

@@ -238,9 +238,10 @@ const MoreInformationBlock = () => {
                 Why Choose Our Premium Photo Booths?
               </Text>
               <Text>
-                1. Quality at Its Best! Choose Union Photo Co. for a top-quality,
-                fun digital photo booth experience. We're known for our
-                excellence. Our photo booths bring a unique, engaging vibe to your event.
+                1. Quality at Its Best! Choose Union Photo Co. for a
+                top-quality, fun digital photo booth experience. We're known for
+                our excellence. Our photo booths bring a unique, engaging vibe
+                to your event.
               </Text>
               <Text>
                 2. Our booths help create and capture delightful moments. From
@@ -273,8 +274,8 @@ const MoreInformationBlock = () => {
                 Our Photo Booth Experience
               </Text>
               <Text pb="1rem">
-                Customized for your event with instant sharing and full gallery. Your guests
-                get their photos instantly.
+                Customized for your event with instant sharing and full gallery.
+                Your guests get their photos instantly.
               </Text>
               <BookNowButton />
             </VStack>
@@ -339,7 +340,7 @@ const MoreInformationBlock = () => {
                 Experience a stress-free event with our dependable team
                 providing a premium photo booth experience.
               </Text>
-              <ol style={{marginLeft: '1rem', marginBottom: '1rem'}}>
+              <ol style={{ marginLeft: "1rem", marginBottom: "1rem" }}>
                 <li>
                   We provide a premium photo booth and professional support.
                 </li>
@@ -528,7 +529,7 @@ export function ImageGrid({ imageUrls }) {
     <>
       <SimpleGrid columns={{ sm: 2, md: 3, lg: 4 }} spacing={0}>
         {imageUrls.map((imageUrl, index) => {
-          if(index > 3 && mobileHidden){
+          if (index > 3 && mobileHidden) {
             return null;
           }
           return (

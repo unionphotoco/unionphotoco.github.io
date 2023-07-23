@@ -27,11 +27,11 @@ import Image from "@components/image";
 import { INavbar } from "./navbar";
 
 const styledLink = {
-  background: 'black',
-  color: 'white',
-  borderRadius: '0',
-  padding: '.5rem 1rem',
-  fontWeight: 'bold'
+  background: "black",
+  color: "white",
+  borderRadius: "0",
+  padding: ".5rem 1rem",
+  fontWeight: "bold",
 };
 
 const DesktopNav: React.FC<
@@ -153,8 +153,7 @@ const DesktopNav: React.FC<
                 {item.title}
               </Link>
             </NextLink>
-          )
-          }
+          )}
         </Flex>
       ))}
     </Stack>
@@ -353,6 +352,6 @@ const MobileNavItem: React.FC<INavbar.IItem> = ({
   );
 };
 
-  MobileNavItem.displayName = "MobileNavItem";
+MobileNavItem.displayName = "MobileNavItem";
 
 export default memo(DesktopNav);

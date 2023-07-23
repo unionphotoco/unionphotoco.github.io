@@ -21,7 +21,8 @@ import {
   Stack,
   Text,
   type TextProps,
-  type ThemingProps, useBreakpointValue,
+  type ThemingProps,
+  useBreakpointValue,
   useColorModeValue,
   VStack,
   Wrap,
@@ -30,6 +31,7 @@ import {
 
 import { ThemeColorContext } from "@definitions/context/theme";
 import { useCountdown } from "@definitions/hooks/useCountdown";
+import Site from "@definitions/site";
 
 import ChakraCarousel from "@components/carousel/carousel";
 import {
@@ -41,7 +43,6 @@ import Image from "@components/image";
 import ProductBox from "@components/product-box";
 import ProductBoxAddToCart from "@components/product-box/product-box-add-to-cart";
 import Showcase, { GridShowcase, TripleShowcase } from "@components/showcase";
-import Site from "@definitions/site";
 
 const Home1Page: React.FC = () => {
   const theme = useContext(ThemeColorContext);
@@ -423,7 +424,7 @@ interface MainSlideshowProps extends ChakraProps, ThemingProps {
 }
 
 const MainSlideshow: React.FC<MainSlideshowProps> = ({ ...rest }) => {
-  const width = useBreakpointValue({ base: '100%', sm: 'auto' });
+  const width = useBreakpointValue({ base: "100%", sm: "auto" });
   return (
     <Box
       pos="relative"
@@ -433,7 +434,7 @@ const MainSlideshow: React.FC<MainSlideshowProps> = ({ ...rest }) => {
       textAlign="center"
       {...rest}
     >
-      <Box marginTop={['33vh','50vh']} marginLeft="auto" marginRight="auto">
+      <Box marginTop={["33vh", "50vh"]} marginLeft="auto" marginRight="auto">
         <Stack direction="row" spacing={4}>
           <Container maxW="container.sm" bgImage="/images/whitebg.svg" p="2rem">
             <Heading
@@ -452,12 +453,23 @@ const MainSlideshow: React.FC<MainSlideshowProps> = ({ ...rest }) => {
             </Text>
             <ButtonGroup variant="outline" spacing="6" width={width}>
               <NextLink href="/photo-booth-rentals" passHref>
-                <Button colorScheme="white" variant="solid" as="a" border="0" borderRadius="0">
+                <Button
+                  colorScheme="white"
+                  variant="solid"
+                  as="a"
+                  border="0"
+                  borderRadius="0"
+                >
                   Learn More
                 </Button>
               </NextLink>
               <NextLink href={Site.bookNow} passHref>
-                <Button colorScheme="black" variant="solid" as="a" borderRadius="0">
+                <Button
+                  colorScheme="black"
+                  variant="solid"
+                  as="a"
+                  borderRadius="0"
+                >
                   Book Now
                 </Button>
               </NextLink>
