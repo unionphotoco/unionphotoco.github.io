@@ -44,7 +44,6 @@ const DesktopNav: React.FC<
   const linkHoverColor = useColorModeValue("gray.800", "white");
   const popoverContentBgColor = useColorModeValue("white", "black");
 
-  // const dividerColor = useColorModeValue("gray.200", "whiteAlpha.400");
   const handleRouteChange = () => setMega(null);
   const router = useRouter();
 
@@ -71,11 +70,11 @@ const DesktopNav: React.FC<
   return (
     <Stack ref={internalRef} direction="row" spacing={4} {...rest}>
       {items.map((item, index, items) => (
-        <Flex key={`idx-${item.title}`}>
+        <Flex key={`index-${item.title}`}>
           {item.subitems ? (
             <>
               <Button
-                onClick={mega != idx ? () => setMega(idx) : null}
+                onClick={mega != index ? () => setMega(index) : null}
                 variant="unstyled"
               >
                 <Text
@@ -99,7 +98,7 @@ const DesktopNav: React.FC<
 
               {item.subitems && (
                 <Portal containerRef={containerRef}>
-                  {mega === idx && (
+                  {mega === index && (
                     <Stack
                       p={6}
                       mt={4}
@@ -339,7 +338,7 @@ const MobileNavItem: React.FC<INavbar.IItem> = ({
           align="start"
         >
           {subitems &&
-            subitems.map((item, index, items) => (
+            subitems.map((item) => (
               <NextLink key={item.title} href={item.href} passHref>
                 <Link py={2}>{item.title}</Link>
               </NextLink>

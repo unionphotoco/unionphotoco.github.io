@@ -1,4 +1,4 @@
-import React, { memo, useContext, useEffect, useRef } from "react";
+import React, { memo, useEffect, useRef } from "react";
 
 import NextLink from "next/link";
 import { useRouter } from "next/router";
@@ -19,22 +19,18 @@ import {
 } from "@chakra-ui/react";
 
 // import type { ChakraProps, ThemingProps } from "@chakra-ui/react";
-import { CartActions, CartCtx } from "@definitions/context/cart";
 import MAIN_NAV_ITEMS from "@definitions/navigation/main";
 
 import Logo from "@components/logo";
 import Navbar, { MobileNav } from "@components/navbar";
-import SiteName from "@components/sitename";
 
 const Header1: React.FC<ChakraProps & ThemingProps> = (props) => {
   const { isOpen, onToggle, onClose } = useDisclosure();
-  const { state, dispatch } = useContext(CartCtx);
 
   const breakpoint = { base: "none", lg: "flex" };
   const breakpointReverse = { base: "flex", lg: "none" };
   const ref = useRef();
   const mobileMenuBG = useColorModeValue("white", "gray.900");
-
   const col = useColorModeValue("blackAlpha.700", "whiteAlpha.700");
 
   const handleRouteChange = () => onClose();
@@ -46,17 +42,6 @@ const Header1: React.FC<ChakraProps & ThemingProps> = (props) => {
       router.events.off("routeChangeComplete", handleRouteChange);
     };
   }, [router.events]);
-
-  const buttonHandler = (
-    event: React.MouseEvent<HTMLButtonElement>,
-    href: string,
-  ) => {
-    event.preventDefault();
-    if (!href) return;
-    if (event.button === 0) router.push(href);
-    if (event.button === 1) router.push(href);
-  };
-
   return (
     <Box py={4} {...props} bg="white">
       <Container maxW="container.xl">

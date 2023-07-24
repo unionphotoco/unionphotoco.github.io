@@ -1,4 +1,4 @@
-import React, { memo, useContext, useRef, useState } from "react";
+import React from "react";
 
 import { NextSeo } from "next-seo";
 import NextImage from "next/image";
@@ -8,77 +8,48 @@ import {
   AspectRatio,
   Box,
   Button,
-  ButtonGroup,
   Center,
   chakra,
   type ChakraProps,
   Container,
-  Divider,
   Flex,
   Grid,
   Heading,
-  HStack,
-  Link,
-  Modal,
-  ModalBody,
-  ModalCloseButton,
-  ModalContent,
-  ModalOverlay,
   SimpleGrid,
   Stack,
   Text,
-  type TextProps,
   type ThemingProps,
   useBreakpointValue,
   useColorModeValue,
   VStack,
-  Wrap,
-  WrapItem,
 } from "@chakra-ui/react";
 
-import { ThemeColorContext } from "@definitions/context/theme";
-import { useCountdown } from "@definitions/hooks/useCountdown";
 import Site from "@definitions/site";
 
-import ChakraCarousel from "@components/carousel/carousel";
-import {
-  FreeShippingIcon,
-  PackageReturnIcon,
-  SecurePaymentIcon,
-} from "@components/icons";
 import Image from "@components/image";
-import ProductBox from "@components/product-box";
-import ProductBoxAddToCart from "@components/product-box/product-box-add-to-cart";
-import Showcase, { GridShowcase, TripleShowcase } from "@components/showcase";
 
-const Home1Page: React.FC = () => {
-  const theme = useContext(ThemeColorContext);
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const themeColorScheme = theme.colorScheme; // global default primary theme color
-
-  return (
-    <>
-      <NextSeo
-        title="Bellevue Photo Booth Rentals"
-        description="Union Photo Co. is a photo booth rental company serving Snohomish County and King County. Book now 833.360.3679."
-      />
-      <chakra.main>
-        <VStack align="stretch" spacing={20}>
-          <PageHeader bg={useColorModeValue("#EBE7DE", "gray.700")} />
+const Home1Page: React.FC = () => (
+  <>
+    <NextSeo
+      title="Bellevue Photo Booth Rentals"
+      description="Union Photo Co. is a photo booth rental company serving Snohomish County and King County. Book now 833.360.3679."
+    />
+    <chakra.main>
+      <VStack align="stretch" spacing={20}>
+        <PageHeader />
+      </VStack>
+      <Center>
+        <VStack spacing={20} maxW="1680">
+          <MoreInformationBlock />
+          <GallerySection />
+          <HowItWorksBlock />
+          <TestimonialsBlock />
+          <BookNowSection />
         </VStack>
-        <Center>
-          <VStack spacing={20} maxW="1680">
-            <MoreInformationBlock />
-            <GallerySection />
-            <HowItWorksBlock />
-            <TestimonialsBlock />
-            <BookNowSection />
-          </VStack>
-        </Center>
-      </chakra.main>
-    </>
-  );
-};
+      </Center>
+    </chakra.main>
+  </>
+);
 
 const TestimonialsBlock = () => {
   return (
@@ -467,22 +438,7 @@ const BookNowSection = () => {
   );
 };
 
-interface MainSlideshowProps extends ChakraProps, ThemingProps {
-  items: {
-    image: string;
-    subtitle: string;
-    title: string;
-    footer: {
-      href: string;
-      body: string;
-      title: string;
-    };
-    price: number;
-    body: string;
-  }[];
-}
-
-const PageHeader: React.FC<MainSlideshowProps> = ({ ...rest }) => {
+const PageHeader: React.FC = () => {
   return (
     <Box
       mt={[200]}
@@ -522,7 +478,7 @@ const imageUrls = [
   "/images/photo-booth - 12.jpeg",
 ];
 
-export function ImageGrid({ imageUrls }) {
+export function ImageGrid({ imageUrls }: { imageUrls: string[] }) {
   const mobileHidden = useBreakpointValue({ base: true, sm: false });
 
   return (

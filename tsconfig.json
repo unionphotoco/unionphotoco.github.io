@@ -16,6 +16,7 @@
     "jsx": "preserve",
     "noImplicitThis": false,
     "baseUrl": ".",
+    "outDir": "./dist/",
     "paths": {
       "@assets/*": ["src/assets/*"],
       "@blocks": ["src/blocks"],

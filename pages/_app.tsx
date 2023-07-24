@@ -1,11 +1,7 @@
 import createCache from "@emotion/cache";
 import { CacheProvider, EmotionCache } from "@emotion/react";
 import "@fontsource/playfair-display";
-// import "@fontsource/playfair-display/500.css";
-// import "@fontsource/playfair-display/600.css";
 import "@fontsource/playfair-display/700.css";
-// import "@fontsource/playfair-display/800.css";
-// import "@fontsource/playfair-display/900.css";
 import "@fontsource/raleway";
 import "@fontsource/raleway/100.css";
 import "@fontsource/raleway/200.css";

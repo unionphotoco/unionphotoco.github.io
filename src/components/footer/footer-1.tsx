@@ -1,17 +1,15 @@
-import React, { memo, useEffect } from "react";
+import React, { memo } from "react";
 
 import NextLink from "next/link";
 import { useRouter } from "next/router";
 
 import {
   Box,
-  Button,
   type ChakraProps,
   Container,
   DarkMode,
   Divider,
   HStack,
-  Input,
   Link,
   List,
   ListIcon,
@@ -35,15 +33,9 @@ import {
   MasterCardIcon,
   VisaCardIcon,
 } from "@components/payment-icons";
-import SiteName from "@components/sitename";
 
-const Footer1: React.FC<ChakraProps & ThemingProps> = ({
-  // colorScheme,
-  ...rest
-}) => {
+const Footer1: React.FC<ChakraProps & ThemingProps> = ({ ...rest }) => {
   const router = useRouter();
-  // const inputBg = useColorModeValue("whiteAlpha.800", "whiteAlpha.600");
-  const color = useColorModeValue("whiteAlpha.800", "whiteAlpha.600");
   const activeColor = useColorModeValue("white", "whiteAlpha.800");
 
   const isActive = (path: string) => router.pathname == path;

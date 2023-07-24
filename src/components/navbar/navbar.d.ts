@@ -20,6 +20,7 @@ declare namespace INavbar {
   }
 
   export interface IItem extends ChakraProps, ThemingProps {
+    target?: string;
     style?: CSSProperties;
     title: string;
     href: string | UrlObject;
@@ -29,6 +30,7 @@ declare namespace INavbar {
     subitems?: IItem[];
     subColumns?: number[];
     subChildren?: React.FC | React.ReactNode | React.ReactElement;
+    isLastItem?: boolean;
   }
 
   // interface I_Item {
