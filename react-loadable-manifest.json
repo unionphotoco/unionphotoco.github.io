@@ -1,0 +1,29 @@
+{
+  "../node_modules/next/dist/client/index.js -> ../pages/_app": {
+    "id": 2741,
+    "files": [
+      "static/chunks/741.5c49c5ccb4a0a8f7.js"
+    ]
+  },
+  "../node_modules/next/dist/client/index.js -> ../pages/_error": {
+    "id": 9651,
+    "files": [
+      "static/chunks/651.8aaebbbff3fb4a6d.js"
+    ]
+  },
+  "../src/layouts/default.tsx -> @components/footer/footer-1": {
+    "id": 7969,
+    "files": [
+      "static/chunks/624.6c8c9ddccd01fc17.js",
+      "static/chunks/969.acf257943866d9d5.js"
+    ]
+  },
+  "../src/layouts/default.tsx -> @components/header/header-1": {
+    "id": 3555,
+    "files": [
+      "static/chunks/624.6c8c9ddccd01fc17.js",
+      "static/chunks/263.16ba0277b841e8c8.js",
+      "static/chunks/555.1302d6964e8da2c6.js"
+    ]
+  }
+}
