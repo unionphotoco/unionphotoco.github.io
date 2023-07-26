@@ -1,44 +1,47 @@
 {
   "../node_modules/next/dist/client/index.js -> ../pages/_app": {
-    "id": "../node_modules/next/dist/client/index.js -> ../pages/_app",
+    "id": 2741,
     "files": [
-      "static/chunks/node_modules_next_dist_pages__app_js.js"
+      "static/chunks/741.5c49c5ccb4a0a8f7.js"
     ]
   },
   "../node_modules/next/dist/client/index.js -> ../pages/_error": {
-    "id": "../node_modules/next/dist/client/index.js -> ../pages/_error",
+    "id": 9651,
     "files": [
-      "static/chunks/node_modules_next_dist_pages__error_js.js"
+      "static/chunks/651.8aaebbbff3fb4a6d.js"
     ]
   },
   "../src/layouts/default.tsx -> @components/footer/footer-1": {
-    "id": "../src/layouts/default.tsx -> @components/footer/footer-1",
+    "id": 7969,
     "files": [
-      "static/chunks/src_components_footer_footer-1_tsx.js"
+      "static/chunks/624.6c8c9ddccd01fc17.js",
+      "static/chunks/969.acf257943866d9d5.js"
     ]
   },
   "../src/layouts/default.tsx -> @components/header/header-1": {
-    "id": "../src/layouts/default.tsx -> @components/header/header-1",
+    "id": 3555,
     "files": [
-      "static/chunks/src_components_header_header-1_tsx.js"
+      "static/chunks/624.6c8c9ddccd01fc17.js",
+      "static/chunks/263.16ba0277b841e8c8.js",
+      "static/chunks/555.1302d6964e8da2c6.js"
     ]
   },
   "photo-booth-rentals.tsx -> @components/section/booknow": {
-    "id": "photo-booth-rentals.tsx -> @components/section/booknow",
+    "id": 6959,
     "files": [
-      "static/chunks/src_components_section_booknow_tsx.js"
+      "static/chunks/959.9b711a0be85b156d.js"
     ]
   },
   "photo-booth-rentals.tsx -> @components/section/ourwork": {
-    "id": "photo-booth-rentals.tsx -> @components/section/ourwork",
+    "id": 5934,
     "files": [
-      "static/chunks/src_components_section_ourwork_tsx.js"
+      "static/chunks/934.ad137b9020d9aea9.js"
     ]
   },
   "photo-booth-rentals.tsx -> @components/section/pricing": {
-    "id": "photo-booth-rentals.tsx -> @components/section/pricing",
+    "id": 901,
     "files": [
-      "static/chunks/src_components_section_pricing_tsx.js"
+      "static/chunks/901.f6cc1fd7d70b1707.js"
     ]
   }
 }
