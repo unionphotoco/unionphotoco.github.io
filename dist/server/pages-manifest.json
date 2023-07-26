@@ -1,12 +1,6 @@
 {
   "/_app": "pages/_app.js",
-  "/404": "pages/404.html",
-  "/500": "pages/500.html",
-  "/_default": "pages/_default.html",
-  "/book-now": "pages/book-now.html",
-  "/": "pages/index.html",
-  "/photo-booth-rentals": "pages/photo-booth-rentals.html",
-  "/terms": "pages/terms.html",
+  "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/_error": "pages/_error.js"
+  "/photo-booth-rentals": "pages/photo-booth-rentals.js"
 }

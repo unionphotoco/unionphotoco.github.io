@@ -65,7 +65,11 @@ const MainSlideshow: React.FC = () => {
             <Text mb="4">
               Lights, Camera, Action: Your Photobooth Journey Begins!
             </Text>
-            <ButtonGroup variant="outline" spacing="6" width={width}>
+            <ButtonGroup
+              variant="outline"
+              spacing="6"
+              width={{ base: "100%", md: "50%" }}
+            >
               <NextLink href="/photo-booth-rentals" passHref>
                 <Button
                   colorScheme="white"
@@ -73,6 +77,7 @@ const MainSlideshow: React.FC = () => {
                   as="a"
                   border="1px solid black"
                   borderRadius="0"
+                  width="100%"
                 >
                   Learn More
                 </Button>
@@ -84,6 +89,8 @@ const MainSlideshow: React.FC = () => {
                   as="a"
                   border="1px solid black"
                   borderRadius="0"
+                  padding="1rem"
+                  width="100%"
                 >
                   Book Now
                 </Button>

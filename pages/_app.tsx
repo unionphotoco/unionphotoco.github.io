@@ -18,6 +18,7 @@ import AOS from "aos";
 
 import { DefaultSeo } from "next-seo";
 import { AppProps } from "next/app";
+import { TrackingHeadScript } from "@phntms/next-gtm";
 
 import { ChakraProvider } from "@chakra-ui/react";
 
@@ -30,6 +31,7 @@ import Layout from "@layouts/default";
 import "@styles/global.scss";
 
 import SEO from "../next-seo.config";
+import GTM_ID from "@definitions/tracking";
 
 type ComponentWithPageLayout = AppProps & {
   Component: AppProps["Component"] & {
@@ -62,6 +64,7 @@ function SencoApp({
       <ThemeColorProvider>
         <ChakraProvider theme={theme}>
           <DefaultSeo {...SEO} />
+          <TrackingHeadScript id={GTM_ID} isGTM={true} />
           {Component.PageLayout ? (
             <Component.PageLayout>
               <Component {...pageProps} />

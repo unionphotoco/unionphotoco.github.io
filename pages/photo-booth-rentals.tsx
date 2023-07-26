@@ -31,7 +31,7 @@ const Home1Page: React.FC = () => (
   <>
     <NextSeo
       title="Bellevue Photo Booth Rentals"
-      description="Union Photo Co. is a photo booth rental company serving Snohomish County and King County. Book now 833.360.3679."
+      description="Union Photo Co. is a fun photo booth rental company serving Snohomish County and King County. Book now 833.360.3679."
     />
     <chakra.main>
       <VStack align="stretch" spacing={20}>
@@ -163,7 +163,7 @@ const MoreInformationBlock = () => {
           <AspectRatio
             // data-aos="fade-right"
             ratio={4 / 3}
-            maxW={768}
+
             minW={"50%"}
             // maxH={400}
             width="full"
@@ -250,7 +250,7 @@ const MoreInformationBlock = () => {
           <AspectRatio
             // data-aos="fade-left"
             ratio={4 / 3}
-            maxW={768}
+
             minW={"50%"}
             // maxH={400}
             width="full"

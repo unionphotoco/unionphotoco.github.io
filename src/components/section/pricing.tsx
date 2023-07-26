@@ -39,7 +39,13 @@ export const PricingSection: React.FC<ChakraProps & ThemingProps> = () => {
             Self Service Digital Photo Booth
           </Heading>
           <Text mb={4}>Digital only photo booth</Text>
-          <UnorderedList mb={4}>
+          <UnorderedList
+            mb="0"
+            ml="0"
+            padding="1rem"
+            borderTop="1px solid grey"
+            borderBottom="1px solid grey"
+          >
             <ListItem mb="1">Starting at $350</ListItem>
             <ListItem mb="1">24 hour rental</ListItem>
             <ListItem mb="1">Unlimited photo and GIF sessions</ListItem>
@@ -50,7 +56,7 @@ export const PricingSection: React.FC<ChakraProps & ThemingProps> = () => {
             </ListItem>
             <ListItem mb="1">$150 to secure your date</ListItem>
           </UnorderedList>
-          <BookNowButton />
+          <BookNowButton fullWidth="full" />
         </Box>
 
         <Box
@@ -64,7 +70,13 @@ export const PricingSection: React.FC<ChakraProps & ThemingProps> = () => {
             Pro Package (MOST POPULAR)
           </Heading>
           <Text mb={4}>Ideal for corporate events and larger parties.</Text>
-          <UnorderedList mb={4}>
+          <UnorderedList
+            mb="0"
+            mr="0"
+            padding="1rem"
+            borderTop="1px solid grey"
+            borderBottom="1px solid grey"
+          >
             <ListItem mb="1">Starting at $895</ListItem>
             <ListItem mb="1">3 hours included</ListItem>
             <ListItem fontWeight="bold" mb="1">
@@ -84,7 +96,7 @@ export const PricingSection: React.FC<ChakraProps & ThemingProps> = () => {
             </ListItem>
             <ListItem mb="1">$150 to secure your date</ListItem>
           </UnorderedList>
-          <BookNowButton />
+          <BookNowButton fullWidth="full" />
         </Box>
 
         <Box
@@ -98,7 +110,13 @@ export const PricingSection: React.FC<ChakraProps & ThemingProps> = () => {
             Pro Package with Printing
           </Heading>
           <Text mb={4}>Perfect for large weddings and events.</Text>
-          <UnorderedList mb={4}>
+          <UnorderedList
+            mb="0"
+            ml="0"
+            padding="1rem"
+            borderTop="1px solid grey"
+            borderBottom="1px solid grey"
+          >
             <ListItem mb="1">Starting at $1095</ListItem>
             <ListItem fontWeight="bold" mb="1">
               4 hours included
@@ -119,7 +137,7 @@ export const PricingSection: React.FC<ChakraProps & ThemingProps> = () => {
             </ListItem>
             <ListItem mb="1">$150 to secure your date</ListItem>
           </UnorderedList>
-          <BookNowButton />
+          <BookNowButton fullWidth="full" />
         </Box>
       </SimpleGrid>
     </Box>

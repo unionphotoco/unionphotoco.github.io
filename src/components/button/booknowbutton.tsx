@@ -6,10 +6,11 @@ import { Button } from "@chakra-ui/react";
 
 import Site from "@definitions/site";
 
-const BookNowButton = () => {
+const BookNowButton = ({ fullWidth = "auto" }: { fullWidth: string }) => {
   return (
     <NextLink href={Site.bookNow} passHref>
       <Button
+        width={fullWidth}
         colorScheme="black"
         variant="solid"
         as="a"

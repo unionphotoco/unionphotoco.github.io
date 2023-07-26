@@ -1,70 +1,34 @@
 {
   "polyfillFiles": [
-    "static/chunks/polyfills-c67a75d1b6f99dc8.js"
+    "static/chunks/polyfills.js"
   ],
-  "devFiles": [],
-  "ampDevFiles": [],
+  "devFiles": [
+    "static/chunks/react-refresh.js"
+  ],
+  "ampDevFiles": [
+    "static/chunks/webpack.js",
+    "static/chunks/amp.js"
+  ],
   "lowPriorityFiles": [
-    "static/LY9dHVQYGaVVVU51cw20p/_buildManifest.js",
-    "static/LY9dHVQYGaVVVU51cw20p/_ssgManifest.js"
+    "static/development/_buildManifest.js",
+    "static/development/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
-    "/": [
-      "static/chunks/webpack-0cb9dab3ec781eab.js",
-      "static/chunks/framework-4556c45dd113b893.js",
-      "static/chunks/main-1173e5a5f3c664fe.js",
-      "static/chunks/pages/index-68d236f16a5ad1fb.js"
-    ],
-    "/404": [
-      "static/chunks/webpack-0cb9dab3ec781eab.js",
-      "static/chunks/framework-4556c45dd113b893.js",
-      "static/chunks/main-1173e5a5f3c664fe.js",
-      "static/chunks/pages/404-66dd29873357336e.js"
-    ],
-    "/500": [
-      "static/chunks/webpack-0cb9dab3ec781eab.js",
-      "static/chunks/framework-4556c45dd113b893.js",
-      "static/chunks/main-1173e5a5f3c664fe.js",
-      "static/chunks/pages/500-983ed12f9df3abf7.js"
-    ],
     "/_app": [
-      "static/chunks/webpack-0cb9dab3ec781eab.js",
-      "static/chunks/framework-4556c45dd113b893.js",
-      "static/chunks/main-1173e5a5f3c664fe.js",
-      "static/css/6d30d2f9d78fd740.css",
-      "static/chunks/pages/_app-eabd6cb3a46bee46.js"
-    ],
-    "/_default": [
-      "static/chunks/webpack-0cb9dab3ec781eab.js",
-      "static/chunks/framework-4556c45dd113b893.js",
-      "static/chunks/main-1173e5a5f3c664fe.js",
-      "static/chunks/pages/_default-386e5695487cc8d9.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/_app.js"
     ],
     "/_error": [
-      "static/chunks/webpack-0cb9dab3ec781eab.js",
-      "static/chunks/framework-4556c45dd113b893.js",
-      "static/chunks/main-1173e5a5f3c664fe.js",
-      "static/chunks/pages/_error-28b0dba9dbcfb4ed.js"
-    ],
-    "/book-now": [
-      "static/chunks/webpack-0cb9dab3ec781eab.js",
-      "static/chunks/framework-4556c45dd113b893.js",
-      "static/chunks/main-1173e5a5f3c664fe.js",
-      "static/chunks/pages/book-now-01775426199c3078.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/_error.js"
     ],
     "/photo-booth-rentals": [
-      "static/chunks/webpack-0cb9dab3ec781eab.js",
-      "static/chunks/framework-4556c45dd113b893.js",
-      "static/chunks/main-1173e5a5f3c664fe.js",
-      "static/chunks/pages/photo-booth-rentals-03a3abb8bb3d0e11.js"
-    ],
-    "/terms": [
-      "static/chunks/webpack-0cb9dab3ec781eab.js",
-      "static/chunks/framework-4556c45dd113b893.js",
-      "static/chunks/main-1173e5a5f3c664fe.js",
-      "static/chunks/803-7792ad5795469b99.js",
-      "static/chunks/pages/terms-ab2d18299a6599f6.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/photo-booth-rentals.js"
     ]
   },
   "ampFirstPages": []
