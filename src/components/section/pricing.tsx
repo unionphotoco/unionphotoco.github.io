@@ -72,6 +72,7 @@ export const PricingSection: React.FC<ChakraProps & ThemingProps> = () => {
           <Text mb={4}>Ideal for corporate events and larger parties.</Text>
           <UnorderedList
             mb="0"
+            ml="0"
             mr="0"
             padding="1rem"
             borderTop="1px solid grey"
