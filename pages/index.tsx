@@ -12,7 +12,7 @@ import {
   Heading,
   Stack,
   Text,
-git   useColorModeValue,
+  useColorModeValue,
   VStack,
 } from "@chakra-ui/react";
 
