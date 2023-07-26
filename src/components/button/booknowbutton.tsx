@@ -1,7 +1,10 @@
-import NextLink from "next/link";
-import Site from "@definitions/site";
-import {Button} from "@chakra-ui/react";
 import React from "react";
+
+import NextLink from "next/link";
+
+import { Button } from "@chakra-ui/react";
+
+import Site from "@definitions/site";
 
 const BookNowButton = () => {
   return (

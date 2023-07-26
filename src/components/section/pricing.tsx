@@ -2,15 +2,16 @@ import * as React from "react";
 
 import {
   Box,
-  ChakraProps,
+  type ChakraProps,
   Heading,
   ListItem,
   SimpleGrid,
   Text,
-  ThemingProps,
-  UnorderedList, useColorModeValue,
+  type ThemingProps,
+  UnorderedList,
+  useColorModeValue,
 } from "@chakra-ui/react";
-import { CheckIcon } from '@chakra-ui/icons';
+
 import BookNowButton from "@components/button/booknowbutton";
 
 export const PricingSection: React.FC<ChakraProps & ThemingProps> = () => {
@@ -44,7 +45,9 @@ export const PricingSection: React.FC<ChakraProps & ThemingProps> = () => {
             <ListItem mb="1">Unlimited photo and GIF sessions</ListItem>
             <ListItem mb="1">Instant sharing via Airdrop or QR code</ListItem>
             <ListItem mb="1">Set up, tear down and delivery is extra</ListItem>
-            <ListItem mb="1">Online gallery of event photos after 48 hours</ListItem>
+            <ListItem mb="1">
+              Online gallery of event photos after 48 hours
+            </ListItem>
             <ListItem mb="1">$150 to secure your date</ListItem>
           </UnorderedList>
           <BookNowButton />
@@ -64,13 +67,21 @@ export const PricingSection: React.FC<ChakraProps & ThemingProps> = () => {
           <UnorderedList mb={4}>
             <ListItem mb="1">Starting at $895</ListItem>
             <ListItem mb="1">3 hours included</ListItem>
-            <ListItem fontWeight="bold" mb="1">Studio quality photos and lighting</ListItem>
-            <ListItem fontWeight="bold" mb="1">Booth Manager</ListItem>
+            <ListItem fontWeight="bold" mb="1">
+              Studio quality photos and lighting
+            </ListItem>
+            <ListItem fontWeight="bold" mb="1">
+              Booth Manager
+            </ListItem>
             <ListItem mb="1">Unlimited photo and GIF sessions</ListItem>
             <ListItem mb="1">Instant sharing via Airdrop or QR code</ListItem>
             <ListItem mb="1">Set up, tear down and delivery included</ListItem>
-            <ListItem mb="1">Online gallery of event photos after 48 hours</ListItem>
-            <ListItem fontWeight="bold" mb="1">Backdrop and props included</ListItem>
+            <ListItem mb="1">
+              Online gallery of event photos after 48 hours
+            </ListItem>
+            <ListItem fontWeight="bold" mb="1">
+              Backdrop and props included
+            </ListItem>
             <ListItem mb="1">$150 to secure your date</ListItem>
           </UnorderedList>
           <BookNowButton />
@@ -89,15 +100,23 @@ export const PricingSection: React.FC<ChakraProps & ThemingProps> = () => {
           <Text mb={4}>Perfect for large weddings and events.</Text>
           <UnorderedList mb={4}>
             <ListItem mb="1">Starting at $1095</ListItem>
-            <ListItem fontWeight="bold" mb="1">4 hours included</ListItem>
+            <ListItem fontWeight="bold" mb="1">
+              4 hours included
+            </ListItem>
             <ListItem mb="1">Studio quality photos and lighting</ListItem>
             <ListItem mb="1">Booth Manager</ListItem>
-            <ListItem fontWeight="bold" mb="1">Near unlimited prints</ListItem>
+            <ListItem fontWeight="bold" mb="1">
+              Near unlimited prints
+            </ListItem>
             <ListItem mb="1">Unlimited photo and GIF sessions</ListItem>
             <ListItem mb="1">Instant sharing via Airdrop or QR code</ListItem>
             <ListItem mb="1">Set up, tear down and delivery included</ListItem>
-            <ListItem fontWeight="bold" mb="1">Custom print template design</ListItem>
-            <ListItem fontWeight="bold" mb="1">Backdrop and props included</ListItem>
+            <ListItem fontWeight="bold" mb="1">
+              Custom print template design
+            </ListItem>
+            <ListItem fontWeight="bold" mb="1">
+              Backdrop and props included
+            </ListItem>
             <ListItem mb="1">$150 to secure your date</ListItem>
           </UnorderedList>
           <BookNowButton />

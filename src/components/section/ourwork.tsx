@@ -1,10 +1,11 @@
 import NextImage from "next/image";
 
-import {
-  Box, ChakraProps,
+import {git
+  Box,
+  type ChakraProps,
   SimpleGrid,
-  ThemingProps,
-  useBreakpointValue
+  type ThemingProps,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 
 const imageUrls = [

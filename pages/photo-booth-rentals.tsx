@@ -1,36 +1,31 @@
 import React from "react";
 
 import { NextSeo } from "next-seo";
-import NextLink from "next/link";
-import dynamic from 'next/dynamic';
+import dynamic from "next/dynamic";
 
 import {
   AspectRatio,
   Box,
-  Button,
   Center,
   chakra,
   type ChakraProps,
   Container,
   Flex,
-  Grid,
   Heading,
   SimpleGrid,
   Stack,
   Text,
   type ThemingProps,
-  useBreakpointValue,
   useColorModeValue,
   VStack,
 } from "@chakra-ui/react";
 
-import Site from "@definitions/site";
-
-import Image from "@components/image";
 import BookNowButton from "@components/button/booknowbutton";
-const LazyOurWorkSection = dynamic(() => import('@components/section/ourwork'));
-const LazyBookNowSection = dynamic(() => import('@components/section/booknow'));
-const LazyPricingSection = dynamic(() => import('@components/section/pricing'));
+import Image from "@components/image";
+
+const LazyOurWorkSection = dynamic(() => import("@components/section/ourwork"));
+const LazyBookNowSection = dynamic(() => import("@components/section/booknow"));
+const LazyPricingSection = dynamic(() => import("@components/section/pricing"));
 
 const Home1Page: React.FC = () => (
   <>
@@ -237,8 +232,8 @@ const MoreInformationBlock = () => {
               </Text>
               <ol style={{ marginLeft: "1rem", marginBottom: "1rem" }}>
                 <li>
-                  Customized for your event with instant sharing and full gallery.
-                  Your guests get their photos instantly.
+                  Customized for your event with instant sharing and full
+                  gallery. Your guests get their photos instantly.
                 </li>
                 <li>
                   We provide a premium photo booth and professional support.
@@ -336,56 +331,6 @@ const HowItWorksBlock: React.FC<ChakraProps & ThemingProps> = () => {
     </Box>
   );
 };
-
-const BookNowSection = () => {
-  const headerSize = useBreakpointValue({ base: "lg", md: "xl" });
-  const textSize = useBreakpointValue({ base: "xl", md: "lg" });
-  const year = new Date().getFullYear();
-
-  return (
-    <Box as="section" width="full" m={0} style={{ marginTop: 0 }}>
-      <Grid templateColumns={{ base: "1fr", md: "1fr 3fr" }} gap={12} mt={0}>
-        <Flex
-          //data-aos="fade-left"
-          align={["start", "start", "center", "center"]}
-          justify={["start", "start", "center", "center"]}
-          width="full"
-          mt={0}
-        >
-          <VStack align="start" width="full">
-            <Box p={7}>
-              <Heading size={headerSize} as="h3">
-                Looking to book in {year}?
-              </Heading>
-              <Text size={textSize} mt={3}>
-                Secure your photo booth rental now. We book up fast!
-              </Text>
-              <BookNowButton />
-              <Text size={textSize} mt={3}>
-                Call or Text:{" "}
-                <NextLink href={`tel:${Site.phoneNumber}`}>
-                  {Site.phoneNumberLabel}
-                </NextLink>
-              </Text>
-              <Text>
-                <NextLink href={`mailto:${Site.contactEmail}`}>
-                  {Site.contactEmail}
-                </NextLink>
-              </Text>
-            </Box>
-          </VStack>
-        </Flex>
-        <Box
-          bgImage="url('/images/photo-collage.jpg')"
-          bgPosition="center"
-          bgSize="contain"
-          minH={600}
-        />
-      </Grid>
-    </Box>
-  );
-};
-
 const PageHeader: React.FC = () => {
   return (
     <Box
@@ -410,6 +355,5 @@ const PageHeader: React.FC = () => {
     </Box>
   );
 };
-
 
 export default Home1Page;

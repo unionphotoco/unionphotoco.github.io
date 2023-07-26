@@ -1,14 +1,19 @@
+import React from "react";
+
+import NextLink from "next/link";
+
 import {
   Box,
   Flex,
   Grid,
-  Heading, Text,
+  Heading,
+  Text,
   useBreakpointValue,
-  VStack
+  VStack,
 } from "@chakra-ui/react";
-import NextLink from "next/link";
+
 import Site from "@definitions/site";
-import React from "react";
+
 import BookNowButton from "@components/button/booknowbutton";
 
 const BookNowSection = () => {
