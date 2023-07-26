@@ -1,6 +1,6 @@
 import NextImage from "next/image";
 
-import {git
+import {
   Box,
   type ChakraProps,
   SimpleGrid,
