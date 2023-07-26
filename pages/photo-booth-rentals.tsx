@@ -1,8 +1,8 @@
 import React from "react";
 
 import { NextSeo } from "next-seo";
-import NextImage from "next/image";
 import NextLink from "next/link";
+import dynamic from 'next/dynamic';
 
 import {
   AspectRatio,
@@ -27,6 +27,10 @@ import {
 import Site from "@definitions/site";
 
 import Image from "@components/image";
+import BookNowButton from "@components/button/booknowbutton";
+const LazyOurWorkSection = dynamic(() => import('@components/section/ourwork'));
+const LazyBookNowSection = dynamic(() => import('@components/section/booknow'));
+const LazyPricingSection = dynamic(() => import('@components/section/pricing'));
 
 const Home1Page: React.FC = () => (
   <>
@@ -41,10 +45,12 @@ const Home1Page: React.FC = () => (
       <Center>
         <VStack spacing={20} maxW="1680">
           <MoreInformationBlock />
-          <GallerySection />
+          <LazyOurWorkSection />
           <HowItWorksBlock />
           <TestimonialsBlock />
-          <BookNowSection />
+          <LazyPricingSection />
+
+          <LazyBookNowSection />
         </VStack>
       </Center>
     </chakra.main>
@@ -149,25 +155,6 @@ const TestimonialsBlock = () => {
     </Box>
   );
 };
-
-const BookNowButton = () => {
-  return (
-    <NextLink href={Site.bookNow} passHref>
-      <Button
-        colorScheme="black"
-        variant="solid"
-        as="a"
-        borderRadius="0"
-        mt="2rem"
-        mb="1rem"
-        style={{ border: "1px solid black" }}
-      >
-        Book Now
-      </Button>
-    </NextLink>
-  );
-};
-
 const MoreInformationBlock = () => {
   return (
     <Box width="full" m={0}>
@@ -179,7 +166,7 @@ const MoreInformationBlock = () => {
           m={0}
         >
           <AspectRatio
-            data-aos="fade-right"
+            // data-aos="fade-right"
             ratio={4 / 3}
             maxW={768}
             minW={"50%"}
@@ -198,7 +185,7 @@ const MoreInformationBlock = () => {
             />
           </AspectRatio>
           <Flex
-            data-aos="fade-left"
+            // data-aos="fade-left"
             align={["start", "start", "center", "center"]}
             justify={["start", "start", "center", "center"]}
             width="full"
@@ -209,7 +196,7 @@ const MoreInformationBlock = () => {
                 Why Choose Our Premium Photo Booths?
               </Text>
               <Text>
-                1. Quality at Its Best! Choose Union Photo Co. for a
+                1. Quality at it's best! Choose Union Photo Co. for a
                 top-quality, fun digital photo booth experience. We're known for
                 our excellence. Our photo booths bring a unique, engaging vibe
                 to your event.
@@ -234,7 +221,7 @@ const MoreInformationBlock = () => {
           background="gray.100"
         >
           <Flex
-            data-aos="fade-right"
+            // data-aos="fade-right"
             align={["start", "start", "center", "center"]}
             justify={["start", "start", "center", "center"]}
             width="full"
@@ -244,74 +231,15 @@ const MoreInformationBlock = () => {
               <Text fontSize="xl" fontWeight="semibold">
                 Our Photo Booth Experience
               </Text>
-              <Text pb="1rem">
-                Customized for your event with instant sharing and full gallery.
-                Your guests get their photos instantly.
-              </Text>
-              <BookNowButton />
-            </VStack>
-          </Flex>
-          <AspectRatio
-            data-aos="fade-left"
-            ratio={4 / 3}
-            maxW={768}
-            minW={"50%"}
-            // maxH={400}
-            width="full"
-            height="full"
-            pos="relative"
-            zIndex={1}
-            bg="#f6f6f8"
-          >
-            <Image
-              src={"/images/digitalphotoboothexperience2.jpg"}
-              alt="Digital Photo Booth Experience"
-              layout="fill"
-              //objectFit="contain"
-              objectPosition="center"
-            />
-          </AspectRatio>
-        </Stack>
-        <Stack
-          overflow="hidden"
-          width="full"
-          direction={["column", "column", "row"]}
-        >
-          <AspectRatio
-            data-aos="fade-right"
-            ratio={4 / 3}
-            maxW={768}
-            minW={"50%"}
-            // maxH={400}
-            width="full"
-            height="full"
-            pos="relative"
-            zIndex={1}
-          >
-            <Image
-              src={"/images/support2.png"}
-              alt="Senco product image"
-              layout="fill"
-              objectFit="cover"
-              objectPosition="center"
-            />
-          </AspectRatio>
-          <Flex
-            data-aos="fade-left"
-            align={["start", "start", "center", "center"]}
-            justify={["start", "start", "center", "center"]}
-            width="full"
-            p={[5, 10, 10]}
-          >
-            <VStack align="start" width="full">
-              <Text fontSize="xl" fontWeight="semibold">
-                Word Class Support
-              </Text>
               <Text mb="1rem">
                 Experience a stress-free event with our dependable team
                 providing a premium photo booth experience.
               </Text>
               <ol style={{ marginLeft: "1rem", marginBottom: "1rem" }}>
+                <li>
+                  Customized for your event with instant sharing and full gallery.
+                  Your guests get their photos instantly.
+                </li>
                 <li>
                   We provide a premium photo booth and professional support.
                 </li>
@@ -324,6 +252,26 @@ const MoreInformationBlock = () => {
               <BookNowButton />
             </VStack>
           </Flex>
+          <AspectRatio
+            // data-aos="fade-left"
+            ratio={4 / 3}
+            maxW={768}
+            minW={"50%"}
+            // maxH={400}
+            width="full"
+            height="full"
+            pos="relative"
+            zIndex={1}
+            bg="#f6f6f8"
+          >
+            <Image
+              src={"/images/digitalphotoboothexperience4.jpeg"}
+              alt="Digital Photo Booth Experience"
+              layout="fill"
+              objectFit="cover"
+              objectPosition="center"
+            />
+          </AspectRatio>
         </Stack>
       </VStack>
     </Box>
@@ -398,7 +346,7 @@ const BookNowSection = () => {
     <Box as="section" width="full" m={0} style={{ marginTop: 0 }}>
       <Grid templateColumns={{ base: "1fr", md: "1fr 3fr" }} gap={12} mt={0}>
         <Flex
-          data-aos="fade-left"
+          //data-aos="fade-left"
           align={["start", "start", "center", "center"]}
           justify={["start", "start", "center", "center"]}
           width="full"
@@ -441,7 +389,7 @@ const BookNowSection = () => {
 const PageHeader: React.FC = () => {
   return (
     <Box
-      mt={[200]}
+      mt={[170]}
       pt={[100]}
       pb={24}
       bg={useColorModeValue("gray.100", "gray.900")}
@@ -452,8 +400,8 @@ const PageHeader: React.FC = () => {
             as="h1"
             lineHeight={[1.5, 1, 1]}
             fontSize={["2em", "3em"]}
-            data-aos="fade-up"
-            data-aos-delay="50"
+            // data-aos="fade-up"
+            // data-aos-delay="50"
           >
             Photo Booth Rentals
           </Heading>
@@ -463,61 +411,5 @@ const PageHeader: React.FC = () => {
   );
 };
 
-const imageUrls = [
-  "/images/photo-booth - 1.jpeg",
-  "/images/photo-booth - 32.jpeg",
-  "/images/photo-booth - 16.jpeg",
-  "/images/photo-booth - 7.jpeg",
-  "/images/photo-booth - 9.jpeg",
-  "/images/photo-booth - 13.jpeg",
-  "/images/photo-booth - 8.jpeg",
-  "/images/photo-booth - 20.jpeg",
-  "/images/photo-booth - 22.jpeg",
-  "/images/photo-booth - 31.jpeg",
-  "/images/photo-booth - 23.jpeg",
-  "/images/photo-booth - 12.jpeg",
-];
-
-export function ImageGrid({ imageUrls }: { imageUrls: string[] }) {
-  const mobileHidden = useBreakpointValue({ base: true, sm: false });
-
-  return (
-    <>
-      <SimpleGrid columns={{ sm: 2, md: 3, lg: 4 }} spacing={0}>
-        {imageUrls.map((imageUrl, index) => {
-          if (index > 3 && mobileHidden) {
-            return null;
-          }
-          return (
-            <div key={imageUrl + index}>
-              <NextImage
-                src={imageUrl}
-                alt="Photo Booth Rental Sample Image"
-                width={300}
-                height={200}
-                objectFit="cover"
-                layout="responsive"
-              />
-            </div>
-          );
-        })}
-      </SimpleGrid>
-    </>
-  );
-}
-
-const GallerySection: React.FC<ChakraProps & ThemingProps> = () => {
-  return (
-    <Box
-      as="section"
-      width="full"
-      mx="auto"
-      p={0}
-      style={{ marginTop: "0", marginBottom: "0" }}
-    >
-      <ImageGrid imageUrls={imageUrls} />
-    </Box>
-  );
-};
 
 export default Home1Page;

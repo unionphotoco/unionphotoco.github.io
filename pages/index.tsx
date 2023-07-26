@@ -45,13 +45,13 @@ const MainSlideshow: React.FC = () => {
       height="100vh"
       textAlign="center"
       bg={useColorModeValue("#EBE7DE", "gray.700")}
-      bgImage="/images/glamphotobooth.jpg"
+      bgImage={"/images/bellevue-photo-booth-experience.jpg"}
       bgSize="cover"
       bgPosition="bottom"
     >
-      <Box marginTop={["33vh", "50vh"]} marginLeft="auto" marginRight="auto">
+      <Box marginTop={["50vh"]} marginLeft="auto" marginRight="auto">
         <Stack direction="row" spacing={4}>
-          <Container maxW="container.sm" bgImage="/images/whitebg.svg" p="2rem">
+          <Container maxW="container.sm" p="2rem" background="white">
             <Heading
               mx="auto"
               as="h1"
@@ -63,8 +63,7 @@ const MainSlideshow: React.FC = () => {
               Photo Booth Rentals
             </Heading>
             <Text mb="4">
-              Union Photo Co. is a photo booth rental company serving Snohomish
-              County and King County.
+              Lights, Camera, Action: Your Photobooth Journey Begins!
             </Text>
             <ButtonGroup variant="outline" spacing="6" width={width}>
               <NextLink href="/photo-booth-rentals" passHref>
@@ -72,7 +71,7 @@ const MainSlideshow: React.FC = () => {
                   colorScheme="white"
                   variant="solid"
                   as="a"
-                  border="0"
+                  border="1px solid black"
                   borderRadius="0"
                 >
                   Learn More
@@ -83,6 +82,7 @@ const MainSlideshow: React.FC = () => {
                   colorScheme="black"
                   variant="solid"
                   as="a"
+                  border="1px solid black"
                   borderRadius="0"
                 >
                   Book Now
