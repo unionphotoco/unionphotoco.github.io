@@ -12,8 +12,7 @@ import {
   Heading,
   Stack,
   Text,
-  useBreakpointValue,
-  useColorModeValue,
+git   useColorModeValue,
   VStack,
 } from "@chakra-ui/react";
 
@@ -36,7 +35,6 @@ const Home1Page: React.FC = () => {
 };
 
 const MainSlideshow: React.FC = () => {
-  const width = useBreakpointValue({ base: "100%", sm: "auto" });
   return (
     <Box
       pos="relative"

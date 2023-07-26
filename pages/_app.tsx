@@ -11,6 +11,7 @@ import "@fontsource/raleway/600.css";
 import "@fontsource/raleway/700.css";
 import "@fontsource/raleway/800.css";
 import "@fontsource/raleway/900.css";
+import { TrackingHeadScript } from "@phntms/next-gtm";
 
 import React, { useEffect } from "react";
 
@@ -18,12 +19,12 @@ import AOS from "aos";
 
 import { DefaultSeo } from "next-seo";
 import { AppProps } from "next/app";
-import { TrackingHeadScript } from "@phntms/next-gtm";
 
 import { ChakraProvider } from "@chakra-ui/react";
 
 import theme from "@definitions/chakra/theme";
 import { ThemeColorProvider } from "@definitions/context/theme";
+import { GTM_ID } from "@definitions/tracking";
 
 import Layout from "@layouts/default";
 
@@ -31,7 +32,6 @@ import Layout from "@layouts/default";
 import "@styles/global.scss";
 
 import SEO from "../next-seo.config";
-import GTM_ID from "@definitions/tracking";
 
 type ComponentWithPageLayout = AppProps & {
   Component: AppProps["Component"] & {

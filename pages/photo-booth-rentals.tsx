@@ -163,7 +163,6 @@ const MoreInformationBlock = () => {
           <AspectRatio
             // data-aos="fade-right"
             ratio={4 / 3}
-
             minW={"50%"}
             // maxH={400}
             width="full"
@@ -250,7 +249,6 @@ const MoreInformationBlock = () => {
           <AspectRatio
             // data-aos="fade-left"
             ratio={4 / 3}
-
             minW={"50%"}
             // maxH={400}
             width="full"
