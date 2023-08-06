@@ -1,32 +1,32 @@
-# Senco - Responsive Multipurpose React  eCommerce Template with Chakra UI
+# Union Photo Co. - Responsive Multipurpose React  eCommerce Template with Chakra UI
 
-Senco template is a huge and powerful multipurpose ecommerce template made to get your website up and running ASAP. Intuitively designed with React and NextJs, It is a perfect solution for creating a fast and beautiful website. Ideal for those who want elegant, clean, and minimal style. Pre-made designs are suitable for crafters, manufacturers, or product designers. It's also highly adaptable to match any taste or need. It can be used to create many different types of websites: app showcase, blogs, portfolios, landing pages, personal, eCommerce shop or business & corporate sites.
+Union Photo Co. template is a huge and powerful multipurpose ecommerce template made to get your website up and running ASAP. Intuitively designed with React and NextJs, It is a perfect solution for creating a fast and beautiful website. Ideal for those who want elegant, clean, and minimal style. Pre-made designs are suitable for crafters, manufacturers, or product designers. It's also highly adaptable to match any taste or need. It can be used to create many different types of websites: app showcase, blogs, portfolios, landing pages, personal, eCommerce shop or business & corporate sites.
 
-Often times it is challenging to get started with your next website. When you are just starting your site, you may not know exactly what you need. You could be building a new e-commerce store, or trying to build a cool portfolio website of your photography work; however, regardless of the project size or complexity, Senco can provide a solution.
+Often times it is challenging to get started with your next website. When you are just starting your site, you may not know exactly what you need. You could be building a new e-commerce store, or trying to build a cool portfolio website of your photography work; however, regardless of the project size or complexity, Union Photo Co. can provide a solution.
 
 **Key Features**
 
 - It's designed with speed in mind and optimized for SEO as well as being mobile-friendly.
 - The template has a quick and easy installation of the sample data, but can easily be re-configured to fit your exact needs. It is possible to edit any part of the sample data and make it match your needs without compromising the template.
-- The Senco’s SEO settings are really flexible, as well as content is separated into blocks for easier editing.
+- The Union Photo Co.’s SEO settings are really flexible, as well as content is separated into blocks for easier editing.
 - In order for everyone to enjoy this template and get the most out of their time producing content for their websites, there has been an effort put into efficiency & usability.
 
 
 ## Getting Started
 
-First, make sure the system [requirements](https://senco.themebiotic.com/docs/getting-started/development/#requirements) are installed.
+First, make sure the system [requirements](https://Union Photo Co..themebiotic.com/docs/getting-started/development/#requirements) are installed.
 
-Senco works with Nextjs and Next needs NodeJS to run. So you need to have NodeJS installed on your system. If not, you should install NodeJs first. [Check this page for documentation on Nodejs installation](https://senco.themebiotic.com/docs/getting-started/development/installation-guides).
+Union Photo Co. works with Nextjs and Next needs NodeJS to run. So you need to have NodeJS installed on your system. If not, you should install NodeJs first. [Check this page for documentation on Nodejs installation](https://Union Photo Co..themebiotic.com/docs/getting-started/development/installation-guides).
 
-Now that the system requirements are met, you can start installing the node packages. All packages required to start working with Senco are registered in the **package.json** file. To start
-installing packages with **NPM**, first open the terminal in the **senco** folder. You can find
-all the files that the senco folder contains in the [Project structure](https://senco.themebiotic.com/docs/getting-started/project-structure) section.
+Now that the system requirements are met, you can start installing the node packages. All packages required to start working with Union Photo Co. are registered in the **package.json** file. To start
+installing packages with **NPM**, first open the terminal in the **Union Photo Co.** folder. You can find
+all the files that the Union Photo Co. folder contains in the [Project structure](https://Union Photo Co..themebiotic.com/docs/getting-started/project-structure) section.
 
 ## Available Scripts
 
 ### Installing dependencies
 
-Run the following command to start installing Senco dependencies.
+Run the following command to start installing Union Photo Co. dependencies.
 
 ```bash
 npm install
@@ -45,7 +45,7 @@ When you run the command, you will see an output like the one below and you can 
 ```bash
 npm run dev
 
-> senco@1.0.0 dev ~/Senco
+> Union Photo Co.@1.0.0 dev ~/Union Photo Co.
 > next dev
 
 ready - started server on 0.0.0.0:3000, url: http://localhost:3000
@@ -75,7 +75,7 @@ When you run the command, you can access your project from [http://localhost:300
 
 ## Learn More
 
-To learn more about **Senco **, please check out the [Documentation](https://senco.themebiotic.com/docs/).
+To learn more about **Union Photo Co. **, please check out the [Documentation](https://Union Photo Co..themebiotic.com/docs/).
 
 ### **Chakra UI**
 
