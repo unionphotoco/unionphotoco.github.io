@@ -43,7 +43,7 @@ const Header1: React.FC<ChakraProps & ThemingProps> = (props) => {
     };
   }, [router.events]);
   return (
-    <Box py={4} {...props} bg="white">
+    <Box py={4} {...props} pb="1" pt="1" bg="white">
       <Container maxW="container.xl">
         <Flex align="center" justify="space-between">
           <NextLink href="/" passHref>
