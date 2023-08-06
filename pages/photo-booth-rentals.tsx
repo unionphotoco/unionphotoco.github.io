@@ -158,13 +158,12 @@ const MoreInformationBlock = () => {
           overflow="hidden"
           width="full"
           direction={["column", "column", "row"]}
+          align="center"
           m={0}
         >
           <AspectRatio
             // data-aos="fade-right"
-            ratio={4 / 3}
             minW={"50%"}
-            // maxH={400}
             width="full"
             height="full"
             pos="relative"
@@ -185,24 +184,20 @@ const MoreInformationBlock = () => {
             width="full"
             p={[5, 10, 10]}
           >
-            <VStack align="start" width="full">
+            <VStack
+              align="start"
+              width="full"
+              border="1px solid"
+              borderColor="gray.100"
+              padding={[5, 10, 10]}
+            >
               <Text fontSize="xl" fontWeight="semibold">
-                Why Choose Our Premium Photo Booths?
-              </Text>
-              <Text>
-                1. Quality at it's best! Choose Union Photo Co. for a
-                top-quality, fun digital photo booth experience. We're known for
-                our excellence. Our photo booths bring a unique, engaging vibe
-                to your event.
-              </Text>
-              <Text>
-                2. Our booths help create and capture delightful moments. From
-                friends' laughter to family bonding, every moment is precious.
+                Why Your Event Needs a Photo Booth
               </Text>
               <Text pb="1rem">
-                3. Our photo booths keep your guests entertained. They'll love
+                Our photo booths keep your guests entertained. They'll love
                 choosing props, striking poses, and sharing pictures instantly.
-                It's fun for everyone!
+                It's fun for everyone!.
               </Text>
               <BookNowButton />
             </VStack>
@@ -212,7 +207,7 @@ const MoreInformationBlock = () => {
           overflow="hidden"
           width="full"
           direction={["column-reverse", "column-reverse", "row"]}
-          background="gray.100"
+          align="center"
         >
           <Flex
             // data-aos="fade-right"
@@ -221,7 +216,13 @@ const MoreInformationBlock = () => {
             width="full"
             p={[5, 10, 10]}
           >
-            <VStack align="start" width="full">
+            <VStack
+              align="start"
+              width="full"
+              border="1px solid"
+              borderColor="gray.100"
+              padding={[5, 10, 10]}
+            >
               <Text fontSize="xl" fontWeight="semibold">
                 Our Photo Booth Experience
               </Text>
@@ -229,7 +230,7 @@ const MoreInformationBlock = () => {
                 Experience a stress-free event with our dependable team
                 providing a premium photo booth experience.
               </Text>
-              <ol style={{ marginLeft: "1rem", marginBottom: "1rem" }}>
+              <ul style={{ marginLeft: "1rem", marginBottom: "1rem" }}>
                 <li>
                   Customized for your event with instant sharing and full
                   gallery. Your guests get their photos instantly.
@@ -238,19 +239,15 @@ const MoreInformationBlock = () => {
                   We provide a premium photo booth and professional support.
                 </li>
                 <li>
-                  Optional booth manager oversees setup, operation, and
-                  takedown.
+                  We're commited to making your event smooth and stress-free.
                 </li>
-                <li>Focused on making your event smooth and stress-free.</li>
-              </ol>
+              </ul>
               <BookNowButton />
             </VStack>
           </Flex>
           <AspectRatio
             // data-aos="fade-left"
-            ratio={4 / 3}
             minW={"50%"}
-            // maxH={400}
             width="full"
             height="full"
             pos="relative"
@@ -285,9 +282,9 @@ const HowItWorksBlock: React.FC<ChakraProps & ThemingProps> = () => {
       </Heading>
 
       <SimpleGrid columns={[1, 1, 2, 4]} spacing={10}>
-        <Box>
+        <Box border="1px solid" borderColor="gray.100" padding={[5]}>
           <Heading as="h3" size="sm" mb="1rem">
-            1. Book a Photo Booth
+            Book a Photo Booth
           </Heading>
           <Text>
             Choose your date and book a photo booth through our easy online
@@ -295,9 +292,9 @@ const HowItWorksBlock: React.FC<ChakraProps & ThemingProps> = () => {
           </Text>
         </Box>
 
-        <Box>
+        <Box border="1px solid" borderColor="gray.100" padding={[5]}>
           <Heading as="h3" size="sm" mb="1rem">
-            2. Customize Your Experience
+            Customize Your Experience
           </Heading>
           <Text>
             We'll contact you to customize the booth design, backdrop, and photo
@@ -305,9 +302,9 @@ const HowItWorksBlock: React.FC<ChakraProps & ThemingProps> = () => {
           </Text>
         </Box>
 
-        <Box>
+        <Box border="1px solid" borderColor="gray.100" padding={[5]}>
           <Heading as="h3" size="sm" mb="1rem">
-            3. Enjoy the Event
+            Enjoy the Event
           </Heading>
           <Text>
             On your special day, an optional booth manager ensures a smooth
@@ -316,9 +313,9 @@ const HowItWorksBlock: React.FC<ChakraProps & ThemingProps> = () => {
           </Text>
         </Box>
 
-        <Box>
+        <Box border="1px solid" borderColor="gray.100" padding={[5]}>
           <Heading as="h3" size="sm" mb="1rem">
-            4. Receive Your Photos
+            Receive Your Photos
           </Heading>
           <Text>
             Guests get their photos instantly. You'll receive all images within
@@ -332,7 +329,7 @@ const HowItWorksBlock: React.FC<ChakraProps & ThemingProps> = () => {
 const PageHeader: React.FC = () => {
   return (
     <Box
-      mt={[170]}
+      mt={[120]}
       pt={[100]}
       pb={24}
       bg={useColorModeValue("gray.100", "gray.900")}

@@ -46,7 +46,7 @@ const createEmotionCache = () => {
 
 const clientSideEmotionCache = createEmotionCache();
 
-function SencoApp({
+function UnionPhotoCoApp({
   Component,
   emotionCache = clientSideEmotionCache,
   pageProps,
@@ -80,4 +80,4 @@ function SencoApp({
   );
 }
 
-export default SencoApp;
+export default UnionPhotoCoApp;

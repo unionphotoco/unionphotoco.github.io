@@ -10,6 +10,7 @@ import {
   chakra,
   Container,
   Heading,
+  Link,
   Stack,
   Text,
   useColorModeValue,
@@ -49,7 +50,7 @@ const MainSlideshow: React.FC = () => {
     >
       <Box marginTop={["50vh"]} marginLeft="auto" marginRight="auto">
         <Stack direction="row" spacing={4}>
-          <Container maxW="container.sm" p="2rem" background="white">
+          <Container maxW="container.sm" p="2rem" background="whiteAlpha.800">
             <Heading
               mx="auto"
               as="h1"
@@ -61,12 +62,13 @@ const MainSlideshow: React.FC = () => {
               Photo Booth Rentals
             </Heading>
             <Text mb="4">
-              Lights, Camera, Action: Your Photobooth Journey Begins!
+              Lights, Camera, Action: Your Photo booth Journey Begins!
             </Text>
             <ButtonGroup
               variant="outline"
               spacing="6"
               width={{ base: "100%", md: "50%" }}
+              mb="4"
             >
               <NextLink href="/photo-booth-rentals" passHref>
                 <Button
