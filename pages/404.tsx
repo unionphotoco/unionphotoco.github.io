@@ -31,6 +31,7 @@ const PageNotFoundPage: React.FC = () => {
       <NextSeo
         title="404 Page not found"
         description="Page not found, It appears that the page you were searching for no longer exists."
+        noindex={true}
       />
       <chakra.main>
         <Container maxW="container.xl" py={28}>

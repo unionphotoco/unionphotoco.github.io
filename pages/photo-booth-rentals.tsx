@@ -330,8 +330,8 @@ const PageHeader: React.FC = () => {
   return (
     <Box
       mt={[120]}
-      pt={[100]}
-      pb={24}
+      pt={[24, 100]}
+      pb={[12, 24, 100]}
       bg={useColorModeValue("gray.100", "gray.900")}
     >
       <Container maxW={850}>
