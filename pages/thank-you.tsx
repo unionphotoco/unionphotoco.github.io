@@ -36,12 +36,6 @@ const TermsPage: React.FC = (): JSX.Element => {
     mb: 5,
   };
 
-  const textStyle = {
-    textAlign: "center",
-    color: useColorModeValue("gray.600", "gray.400"),
-    fontSize: "lg",
-  };
-
   interface Defaults extends Components {
     heading?: Components["h1"];
   }
@@ -54,11 +48,7 @@ const TermsPage: React.FC = (): JSX.Element => {
         noindex={true}
       />
       <chakra.main>
-        <PageTitle
-          {...headingStyle}
-          body=" "
-          title="Thank you for booking."
-        />
+        <PageTitle {...headingStyle} body=" " title="Thank you for booking." />
       </chakra.main>
     </>
   );
