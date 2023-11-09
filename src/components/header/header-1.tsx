@@ -81,7 +81,7 @@ const Header1: React.FC<ChakraProps & ThemingProps> = (props) => {
         >
           <Box maxW="container.xl" textAlign="center" maxWidth="100%">
             <Text textAlign="center" width="100%" margin="auto" color="white">
-              Use promo code "Holiday" for $50 off.{" "}
+              Use promo code <b>"Holiday"</b> for $50 off.{" "}
               <NextLink href="/book-now" passHref>
                 <Link>
                   <b>Book Now</b>
