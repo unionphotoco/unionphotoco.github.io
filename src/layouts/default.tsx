@@ -39,13 +39,7 @@ const DefaultLayout: React.FC<ILayout.IProps> = ({
         {header ? (
           header
         ) : (
-          <HeaderDefault
-            pos="absolute"
-            zIndex="sticky"
-            top={0}
-            width="full"
-            py={6}
-          />
+          <HeaderDefault pos="absolute" zIndex="sticky" width="full" py="0" />
         )}
         {children}
         {footer ? footer : <FooterDefault />}

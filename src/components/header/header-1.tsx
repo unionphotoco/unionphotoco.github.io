@@ -13,6 +13,7 @@ import {
   HStack,
   IconButton,
   Link,
+  Text,
   type ThemingProps,
   useColorModeValue,
   useDisclosure,
@@ -24,6 +25,28 @@ import MAIN_NAV_ITEMS from "@definitions/navigation/main";
 import Logo from "@components/logo";
 import Navbar, { MobileNav } from "@components/navbar";
 
+function isBetweenTwoDates(
+  date1Str: string,
+  date2Str: string,
+  today: Date = new Date(),
+): boolean {
+  // Parse the input dates as strings in the format 'MM-DD'
+  const date1Parts = date1Str.split("-");
+  const date2Parts = date2Str.split("-");
+
+  const date1 = new Date(
+    today.getFullYear(),
+    parseInt(date1Parts[0], 10) - 1,
+    parseInt(date1Parts[1], 10),
+  );
+  const date2 = new Date(
+    today.getFullYear(),
+    parseInt(date2Parts[0], 10) - 1,
+    parseInt(date2Parts[1], 10),
+  );
+
+  return date1 <= today && today <= date2;
+}
 const Header1: React.FC<ChakraProps & ThemingProps> = (props) => {
   const { isOpen, onToggle, onClose } = useDisclosure();
 
@@ -36,6 +59,8 @@ const Header1: React.FC<ChakraProps & ThemingProps> = (props) => {
   const handleRouteChange = () => onClose();
   const router = useRouter();
 
+  const displayPromo = isBetweenTwoDates("12-01", "12-31");
+
   useEffect(() => {
     router.events.on("routeChangeComplete", handleRouteChange);
     return () => {
@@ -43,60 +68,85 @@ const Header1: React.FC<ChakraProps & ThemingProps> = (props) => {
     };
   }, [router.events]);
   return (
-    <Box py={4} {...props} pb="1" pt="1" bg="white">
-      <Container maxW="container.xl">
-        <Flex align="center" justify="space-between">
-          <NextLink href="/" passHref>
-            <Link _hover={{ color: col }}>
-              <HStack align="center">
-                <Logo width="250" />
-              </HStack>
-            </Link>
-          </NextLink>
-
-          <Navbar
-            containerRef={ref}
-            display={breakpoint}
-            items={MAIN_NAV_ITEMS}
-          />
-
-          {/* Mobile Menu Button */}
-          <Box display={breakpointReverse}>
-            <IconButton
-              onClick={onToggle}
-              icon={
-                isOpen ? (
-                  <CloseIcon w={3} h={3} />
-                ) : (
-                  <HamburgerIcon w={5} h={5} />
-                )
-              }
-              colorScheme="white"
-              borderRadius="0"
-              aria-label="Toggle Navigation"
-            />
+    <>
+      {displayPromo && (
+        <Container
+          background="#165F21"
+          textAlign="center"
+          textTransform="uppercase"
+          width="100%"
+          maxWidth="100%"
+          margin="auto"
+          padding=".5rem"
+        >
+          <Box maxW="container.xl" textAlign="center" maxWidth="100%">
+            <Text textAlign="center" width="100%" margin="auto" color="white">
+              Use promo code "Holiday" for $50 off.{" "}
+              <NextLink href="/book-now" passHref>
+                <Link>
+                  <b>Book Now</b>
+                </Link>
+              </NextLink>
+            </Text>
           </Box>
-        </Flex>
+        </Container>
+      )}
 
-        {/* Mega Menu container */}
-        <Box
-          display={["none", "none", "none", "block"]}
-          ref={ref}
-          pos="relative"
-          zIndex="sticky"
-          width="full"
-        />
-      </Container>
+      <Box py={4} {...props} pb="1" bg="white">
+        <Container maxW="container.xl">
+          <Flex align="center" justify="space-between">
+            <NextLink href="/" passHref>
+              <Link _hover={{ color: col }}>
+                <HStack align="center">
+                  <Logo width="250" />
+                </HStack>
+              </Link>
+            </NextLink>
 
-      {/* Mobile Collapse */}
-      <Collapse in={isOpen} animateOpacity>
-        <Box display={breakpointReverse} mt={4} py={2} bg={mobileMenuBG}>
-          <Container maxW="container.xl">
-            <MobileNav items={MAIN_NAV_ITEMS} />
-          </Container>
-        </Box>
-      </Collapse>
-    </Box>
+            <Navbar
+              containerRef={ref}
+              display={breakpoint}
+              items={MAIN_NAV_ITEMS}
+            />
+
+            {/* Mobile Menu Button */}
+            <Box display={breakpointReverse}>
+              <IconButton
+                onClick={onToggle}
+                icon={
+                  isOpen ? (
+                    <CloseIcon w={3} h={3} />
+                  ) : (
+                    <HamburgerIcon w={5} h={5} />
+                  )
+                }
+                colorScheme="white"
+                borderRadius="0"
+                aria-label="Toggle Navigation"
+              />
+            </Box>
+          </Flex>
+
+          {/* Mega Menu container */}
+          <Box
+            display={["none", "none", "none", "block"]}
+            ref={ref}
+            pos="relative"
+            zIndex="sticky"
+            width="full"
+          />
+        </Container>
+
+        {/* Mobile Collapse */}
+        <Collapse in={isOpen} animateOpacity>
+          <Box display={breakpointReverse} mt={4} py={2} bg={mobileMenuBG}>
+            <Container maxW="container.xl">
+              <MobileNav items={MAIN_NAV_ITEMS} />
+            </Container>
+          </Box>
+        </Collapse>
+      </Box>
+    </>
   );
 };
 
