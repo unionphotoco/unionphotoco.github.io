@@ -59,7 +59,7 @@ const Header1: React.FC<ChakraProps & ThemingProps> = (props) => {
   const handleRouteChange = () => onClose();
   const router = useRouter();
 
-  const displayPromo = isBetweenTwoDates("12-01", "12-31");
+  const displayPromo = isBetweenTwoDates("11-01", "12-31");
 
   useEffect(() => {
     router.events.on("routeChangeComplete", handleRouteChange);
