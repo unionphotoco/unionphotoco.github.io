@@ -59,7 +59,7 @@ const Header1: React.FC<ChakraProps & ThemingProps> = (props) => {
   const handleRouteChange = () => onClose();
   const router = useRouter();
 
-  const displayPromo = isBetweenTwoDates("11-01", "12-31");
+  const displayPromo = isBetweenTwoDates("01-01", "12-29");
 
   useEffect(() => {
     router.events.on("routeChangeComplete", handleRouteChange);
@@ -71,7 +71,7 @@ const Header1: React.FC<ChakraProps & ThemingProps> = (props) => {
     <>
       {displayPromo && (
         <Container
-          background="#165F21"
+          background="#ebe7de"
           textAlign="center"
           textTransform="uppercase"
           width="100%"
@@ -80,8 +80,8 @@ const Header1: React.FC<ChakraProps & ThemingProps> = (props) => {
           padding=".5rem"
         >
           <Box maxW="container.xl" textAlign="center" maxWidth="100%">
-            <Text textAlign="center" width="100%" margin="auto" color="white">
-              Use promo code <b>"Holiday"</b> for $50 off.{" "}
+            <Text textAlign="center" width="100%" margin="auto" color="black">
+              Use promo code <b>"WEDDING"</b> for $50 off.{" "}
               <NextLink href="/book-now" passHref>
                 <Link>
                   <b>Book Now</b>
