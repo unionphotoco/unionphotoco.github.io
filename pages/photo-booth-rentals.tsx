@@ -44,7 +44,6 @@ const Home1Page: React.FC = () => (
           <HowItWorksBlock />
           <TestimonialsBlock />
           <LazyPricingSection />
-
           <LazyBookNowSection />
         </VStack>
       </Center>

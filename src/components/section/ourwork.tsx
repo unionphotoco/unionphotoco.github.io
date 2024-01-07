@@ -10,17 +10,18 @@ import {
 
 const imageUrls = [
   "/images/photo-booth - 9.jpeg",
+  "/images/Promo-Pics - 10.jpeg",
   "/images/photo-booth - 32.jpeg",
-  "/images/photo-booth - 16.jpeg",
+  "/images/Promo-Pics - 42.jpeg",
+  "/images/Promo-Pics - 39.jpeg",
   "/images/photo-booth-7.jpeg",
-  "/images/photo-booth - 13.jpeg",
-  "/images/photo-booth - 8.jpeg",
+  "/images/Promo-Pics - 1 .jpeg",
   "/images/photo-booth - 20.jpeg",
-  "/images/photo-booth-1.jpeg",
+  "/images/photo-booth - 16.jpeg",
+  "/images/Promo-Pics - 20.jpeg",
   "/images/photo-booth - 22.jpeg",
-  "/images/photo-booth - 31.jpeg",
-  "/images/photo-booth - 23.jpeg",
-  "/images/photo-booth - 12.jpeg",
+  "/images/Promo-Pics - 25.jpeg",
+
 ];
 
 export function ImageGrid({ imageUrls }: { imageUrls: string[] }) {
