@@ -44,7 +44,7 @@ const MainSlideshow: React.FC = () => {
       height="100vh"
       textAlign="center"
       bg={useColorModeValue("#EBE7DE", "gray.700")}
-      bgImage={"/images/bellevue-photobooth-rental1.jpg"}
+      bgImage={"/images/Bellevue-Photo-Booth-Rentals.jpeg"}
       bgSize="cover"
       bgPosition="bottom"
     >
