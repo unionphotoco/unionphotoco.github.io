@@ -21,7 +21,6 @@ const imageUrls = [
   "/images/Promo-Pics - 20.jpeg",
   "/images/photo-booth - 22.jpeg",
   "/images/Promo-Pics - 25.jpeg",
-
 ];
 
 export function ImageGrid({ imageUrls }: { imageUrls: string[] }) {
