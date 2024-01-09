@@ -37,7 +37,10 @@ export function ImageGrid({ imageUrls }: { imageUrls: string[] }) {
             <div key={imageUrl + index}>
               <NextImage
                 src={imageUrl}
-                alt="Photo Booth Rental Sample Image"
+                alt="Photo Booth Rental Sample Images"
+                sizes="(min-width: 60em) 24vw,
+                    (min-width: 28em) 45vw,
+                    100vw"
                 width={300}
                 height={200}
                 objectFit="cover"

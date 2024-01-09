@@ -20,6 +20,8 @@ const nextConfig = {
   },
   images: {
     domains: ["images.unsplash.com", "source.unsplash.com"],
+    deviceSizes: [640, 768, 1024, 1280, 1600],
+    imageSizes: [16, 32, 48, 64, 96],
   },
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
@@ -28,3 +30,20 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
+
+document.querySelectorAll(".listing-details").forEach((item) => {
+  let results = "";
+  let links = item.getElementsByTagName("a");
+  let businessName = item.getElementsByTagName("h3");
+  let phone = item.querySelector('span[itemprop="telephone"]');
+  let address = item.querySelector('span[itemprop="streetAddress"]');
+  // console.log(businessName[0].textContent);
+  // console.log(phone?.textContent);
+  results += businessName[0].textContent + " " + phone?.textContent + " " + address?.textContent;
+  Array.from(links).forEach((link) => {
+    if (link.textContent === "Website") {
+      results += " " + link.href;
+    }
+  });
+  console.log(results);
+});
