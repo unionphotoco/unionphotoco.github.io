@@ -254,7 +254,7 @@ const MoreInformationBlock = () => {
             bg="#f6f6f8"
           >
             <Image
-              src={"/images/digitalphotoboothexperience4.jpeg"}
+              src={"/images/prophotobooth.jpg"}
               alt="Digital Photo Booth Experience"
               layout="fill"
               objectFit="cover"
