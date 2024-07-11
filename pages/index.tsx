@@ -10,7 +10,6 @@ import {
   chakra,
   Container,
   Heading,
-  Link,
   Stack,
   Text,
   useColorModeValue,

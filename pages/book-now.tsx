@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
-
+// eslint-disable-next-line import/no-unresolved
 import { addForm } from "@utils/honeybook";
+
+import React, { useEffect } from "react";
 
 import { NextSeo } from "next-seo";
 

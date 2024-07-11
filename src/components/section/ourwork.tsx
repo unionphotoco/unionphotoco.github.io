@@ -195,7 +195,7 @@ export function ImageGrid() {
   );
 }
 
-export const OurWorkSection: React.FC<ChakraProps & ThemingProps> = () => {
+export const OurWorkSection = () => {
   return (
     <Box
       as="section"

@@ -34,7 +34,6 @@
       "@images/*": ["public/images/*"],
       "@test": ["test"],
       "@test/*": ["test/*"],
-      "@utils": ["src/utils"],
       "@utils/*": ["src/utils/*"]
     },
     "incremental": true

@@ -12,3 +12,5 @@ export const addForm = (formId: string) => {
   }
   return scriptId;
 };
+
+export default addForm;

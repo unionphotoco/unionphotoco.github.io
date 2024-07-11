@@ -1,11 +1,3 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
-
-# testing
 /coverage
 
 # next.js
@@ -14,7 +6,7 @@
 
 # production
 /build
-dist/*
+/dist/        # Ensure this line exists to ignore the entire dist directory
 
 # misc
 .DS_Store
@@ -31,8 +23,6 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
-dist
-
 # vercel
 .vercel
 .vscode
@@ -40,3 +30,4 @@ dist
 
 # local notes
 *.local.md
+

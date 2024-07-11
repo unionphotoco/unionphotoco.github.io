@@ -1,44 +1,18 @@
-import { useContext } from "react";
-
-import ChakraUIRenderer from "chakra-ui-markdown-renderer";
-import ReactMarkdown from "react-markdown";
 import { Components } from "react-markdown/lib/ast-to-react";
 
 import { NextSeo } from "next-seo";
 
-import {
-  Box,
-  chakra,
-  Container,
-  Flex,
-  Heading,
-  Link,
-  ListItem,
-  OrderedList,
-  Text,
-  useColorModeValue,
-  VStack,
-} from "@chakra-ui/react";
-
-import { ThemeColorContext } from "@definitions/context/theme";
-import terms from "@definitions/data/terms";
-import { useScrollSpy } from "@definitions/hooks/useScrollSpy";
+import { chakra } from "@chakra-ui/react";
 
 import PageTitle from "@components/page-title";
 
-const TermsPage: React.FC = (): JSX.Element => {
-  const theme = useContext(ThemeColorContext);
-
+const ThankYou: React.FC = (): JSX.Element => {
   const headingStyle = {
     fontSize: "lg",
     fontFamily: "body",
     fontWeight: "700",
     mb: 5,
   };
-
-  interface Defaults extends Components {
-    heading?: Components["h1"];
-  }
 
   return (
     <>
@@ -54,4 +28,4 @@ const TermsPage: React.FC = (): JSX.Element => {
   );
 };
 
-export default TermsPage;
+export default ThankYou;
