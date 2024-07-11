@@ -1,5 +1,3 @@
-import { Components } from "react-markdown/lib/ast-to-react";
-
 import { NextSeo } from "next-seo";
 
 import { chakra } from "@chakra-ui/react";

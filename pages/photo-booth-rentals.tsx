@@ -1,3 +1,6 @@
+// eslint-disable-next-line import/no-unresolved
+import heroImage from "@images/hero-image.jpg";
+
 import React from "react";
 
 import { NextSeo } from "next-seo";
@@ -14,8 +17,6 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-
-import heroImage from "@images/hero-image.jpg";
 
 import BookNowButton from "@components/button/booknowbutton";
 import Image from "@components/image";
