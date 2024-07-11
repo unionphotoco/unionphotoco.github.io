@@ -8,15 +8,13 @@ import {
   Box,
   Center,
   chakra,
-  type ChakraProps,
+  Image as ChakraImage,
   Container,
   Flex,
   Heading,
   SimpleGrid,
   Stack,
   Text,
-  type ThemingProps,
-  useColorModeValue,
   VStack,
 } from "@chakra-ui/react";
 
@@ -39,7 +37,7 @@ const Home1Page: React.FC = () => (
       </VStack>
       <Center>
         <VStack spacing={20} maxW="1680">
-          <MoreInformationBlock />
+          {/*<MoreInformationBlock />*/}
           <LazyOurWorkSection />
           <HowItWorksBlock />
           <TestimonialsBlock />
@@ -149,6 +147,7 @@ const TestimonialsBlock = () => {
     </Box>
   );
 };
+
 const MoreInformationBlock = () => {
   return (
     <Box width="full" m={0}>
@@ -254,7 +253,7 @@ const MoreInformationBlock = () => {
             bg="#f6f6f8"
           >
             <Image
-              src={"/images/prophotobooth.jpg"}
+              src={"/images/hero-image.jpg"}
               alt="Digital Photo Booth Experience"
               layout="fill"
               objectFit="cover"
@@ -267,7 +266,7 @@ const MoreInformationBlock = () => {
   );
 };
 
-const HowItWorksBlock: React.FC<ChakraProps & ThemingProps> = () => {
+const HowItWorksBlock: React.FC = () => {
   return (
     <Box
       width="full"
@@ -279,7 +278,6 @@ const HowItWorksBlock: React.FC<ChakraProps & ThemingProps> = () => {
       <Heading as="h2" size="lg" textAlign="center" mb="12">
         How it Works
       </Heading>
-
       <SimpleGrid columns={[1, 1, 2, 4]} spacing={10}>
         <Box border="1px solid" borderColor="gray.100" padding={[5]}>
           <Heading as="h3" size="sm" mb="1rem">
@@ -290,7 +288,6 @@ const HowItWorksBlock: React.FC<ChakraProps & ThemingProps> = () => {
             system. Your deposit secures your date.
           </Text>
         </Box>
-
         <Box border="1px solid" borderColor="gray.100" padding={[5]}>
           <Heading as="h3" size="sm" mb="1rem">
             Customize Your Experience
@@ -300,7 +297,6 @@ const HowItWorksBlock: React.FC<ChakraProps & ThemingProps> = () => {
             layout to match your event theme.
           </Text>
         </Box>
-
         <Box border="1px solid" borderColor="gray.100" padding={[5]}>
           <Heading as="h3" size="sm" mb="1rem">
             Enjoy the Event
@@ -311,7 +307,6 @@ const HowItWorksBlock: React.FC<ChakraProps & ThemingProps> = () => {
             props.
           </Text>
         </Box>
-
         <Box border="1px solid" borderColor="gray.100" padding={[5]}>
           <Heading as="h3" size="sm" mb="1rem">
             Receive Your Photos
@@ -325,26 +320,143 @@ const HowItWorksBlock: React.FC<ChakraProps & ThemingProps> = () => {
     </Box>
   );
 };
+
 const PageHeader: React.FC = () => {
   return (
-    <Box
-      mt={[120]}
-      pt={[24, 100]}
-      pb={[12, 24, 100]}
-      bg={useColorModeValue("gray.100", "gray.900")}
+    <Container
+      maxW="100%"
+      marginTop="4.3em"
+      padding="1em"
     >
-      <Container maxW={850}>
-        <VStack textAlign="center">
-          <Heading
-            as="h1"
-            lineHeight={[1.5, 1, 1]}
-            fontSize={["2em", "3em"]}
-            // data-aos="fade-up"
-            // data-aos-delay="50"
+      <Box maxW="1680" mx="auto" pt="2em" pb="2em">
+        <SimpleGrid columns={{ base: 1, md: 2 }}>
+          <Box order={{ base: 2, md: 1 }} display="flex" alignItems="center">
+            <Box mr={["0", "4em", "8em"]}>
+              <VStack align="start" spacing={5}>
+                <Box>
+                  <Heading as="h1" size={["xl", "2xl"]} lineHeight="1.5em" mb=".7em">
+                    Photo Booth Rentals
+                  </Heading>
+                  <Text fontSize="xl" mb=".8em">
+                    Our photo booths keep your guests entertained. They'll love
+                    choosing props, striking poses, and sharing pictures
+                    instantly. It's fun for everyone!
+                  </Text>
+                  <ul style={{ marginLeft: "1rem", marginBottom: "1rem", lineHeight: '2rem' }}>
+                    <li>Our photo booth make you look amazing</li>
+                    <li>
+                      Customized for your event with instant sharing and full
+                      gallery.
+                    </li>
+                    <li>
+                      Premium photo booth experience and professional support.
+                    </li>
+                    <li>Instant Photo Sharing</li>
+                    <li>Online Gallery</li>
+                  </ul>
+                  <BookNowButton />
+                </Box>
+              </VStack>
+            </Box>
+          </Box>
+          <Box order={{ base: 1, md: 2 }}>
+            <Box mb="1em">
+              <AspectRatio
+                // data-aos="fade-left"
+                minW={"50%"}
+                width="full"
+                pos="relative"
+                zIndex={1}
+                bg="#f6f6f8"
+              >
+                <Image
+                  src={"/images/hero-image.jpg"}
+                  alt="Digital Photo Booth Experience"
+                  layout="fill"
+                  objectFit="cover"
+                  objectPosition="center"
+                />
+              </AspectRatio>
+            </Box>
+          </Box>
+        </SimpleGrid>
+      </Box>
+    </Container>
+  );
+};
+
+const PageHeader2: React.FC = () => {
+  return (
+    <Box>
+      <Container
+        maxW="1200px"
+        marginTop="6em"
+        padding="1em"
+        borderTop="1px solid #ccc"
+      >
+        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
+          <VStack align="start" justify="center" spacing={5}>
+            <Heading as="h1" size="2xl">
+              Photo Booth Rentals
+            </Heading>
+            <Text fontSize="xl">
+              Union Photo Co. is a fun photo booth rental company serving
+              Snohomish County and King County. Book now 833.360.3679.
+            </Text>
+            <BookNowButton />
+          </VStack>
+          <AspectRatio
+            // data-aos="fade-left"
+            minW={"50%"}
+            width="full"
+            height="full"
+            pos="relative"
+            zIndex={1}
+            bg="#f6f6f8"
           >
-            Photo Booth Rentals
-          </Heading>
-        </VStack>
+            <Image
+              src={"/images/prophotobooth.jpg"}
+              alt="Digital Photo Booth Experience"
+              layout="fill"
+              objectFit="cover"
+              objectPosition="center"
+            />
+          </AspectRatio>
+          <AspectRatio
+            // data-aos="fade-left"
+            minW={"50%"}
+            width="full"
+            height="full"
+            pos="relative"
+            zIndex={1}
+            bg="#f6f6f8"
+          >
+            <Image
+              src={"/images/prophotobooth.jpg"}
+              alt="Digital Photo Booth Experience"
+              layout="fill"
+              objectFit="cover"
+              objectPosition="center"
+            />
+          </AspectRatio>
+          <AspectRatio
+            // data-aos="fade-left"
+            minW={"50%"}
+            width="full"
+            height="full"
+            pos="relative"
+            zIndex={1}
+            bg="#f6f6f8"
+          >
+            <Image
+              src={"/images/prophotobooth.jpg"}
+              alt="Digital Photo Booth Experience"
+              layout="fill"
+              objectFit="cover"
+              objectPosition="center"
+            />
+          </AspectRatio>
+        </SimpleGrid>
       </Container>
     </Box>
   );

@@ -49,8 +49,8 @@ const ContactPage: React.FC = () => {
         bg={useColorModeValue("gray.50", "gray.800")}
       >
         <Box
-          pt={[48, 32, 250]}
-          pb={32}
+          pt={[24, 32, 164]}
+          pb={[24, 32]}
           bg={useColorModeValue("gray.100", "gray.900")}
         >
           <Container maxW={850}>

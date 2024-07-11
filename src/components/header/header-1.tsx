@@ -22,7 +22,7 @@ import {
 // import type { ChakraProps, ThemingProps } from "@chakra-ui/react";
 import MAIN_NAV_ITEMS from "@definitions/navigation/main";
 
-import Logo from "@components/logo";
+import Logo, { Logo2 } from "@components/logo";
 import Navbar, { MobileNav } from "@components/navbar";
 
 function isBetweenTwoDates(
@@ -78,6 +78,7 @@ const Header1: React.FC<ChakraProps & ThemingProps> = (props) => {
           maxWidth="100%"
           margin="auto"
           padding=".5rem"
+          fontSize={[".7em", "md"]}
         >
           <Box maxW="container.xl" textAlign="center" maxWidth="100%">
             <Text textAlign="center" width="100%" margin="auto" color="black">
@@ -98,7 +99,8 @@ const Header1: React.FC<ChakraProps & ThemingProps> = (props) => {
             <NextLink href="/" passHref>
               <Link _hover={{ color: col }}>
                 <HStack align="center">
-                  <Logo width="250" />
+                  <Logo width="250" display={["none", "none", "block", "block"]} />
+                  <Logo2 width="200" display={["block", "block", "none", "none"]}/>
                 </HStack>
               </Link>
             </NextLink>

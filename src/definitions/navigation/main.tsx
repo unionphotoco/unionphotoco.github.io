@@ -72,10 +72,15 @@ export const main = [
   //   title: "Contact",
   //   href: "/contact",
   // },
+  // {
+  //   title: "833.360.3679",
+  //   href: "tel:8333603679",
+  //   id: "menu-phonenumber",
+  // },
   {
-    title: "833.360.3679",
-    href: "tel:8333603679",
-    id: "menu-phonenumber",
+    title: "Contact",
+    href: "/contact",
+    id: "menu-contact",
   },
   {
     title: "Book Now",
