@@ -13,7 +13,10 @@ const Logo: React.FC<ChakraProps & ThemingProps> = ({ width, display }) => (
   />
 );
 
-export const Logo2: React.FC<ChakraProps & ThemingProps> = ({ width, display }) => (
+export const Logo2: React.FC<ChakraProps & ThemingProps> = ({
+  width,
+  display,
+}) => (
   <Image
     src="/images/logo/UnionPhotoCo.png"
     alt="Union Photo Co. photo booth rentals"

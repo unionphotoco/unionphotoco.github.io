@@ -99,8 +99,14 @@ const Header1: React.FC<ChakraProps & ThemingProps> = (props) => {
             <NextLink href="/" passHref>
               <Link _hover={{ color: col }}>
                 <HStack align="center">
-                  <Logo width="250" display={["none", "none", "block", "block"]} />
-                  <Logo2 width="200" display={["block", "block", "none", "none"]}/>
+                  <Logo
+                    width="250"
+                    display={["none", "none", "block", "block"]}
+                  />
+                  <Logo2
+                    width="200"
+                    display={["block", "block", "none", "none"]}
+                  />
                 </HStack>
               </Link>
             </NextLink>

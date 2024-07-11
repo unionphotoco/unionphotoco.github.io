@@ -1,54 +1,195 @@
+import Image1 from "@images/photo-booth - 9.jpeg";
+import Image9 from "@images/photo-booth - 16.jpeg";
+import Image8 from "@images/photo-booth - 20.jpeg";
+import Image11 from "@images/photo-booth - 22.jpeg";
+import Image3 from "@images/photo-booth - 32.jpeg";
+import Image6 from "@images/photo-booth-7.jpeg";
+import Image7 from "@images/Promo-Pics - 1 .jpeg";
+import Image2 from "@images/Promo-Pics - 10.jpeg";
+import Image10 from "@images/Promo-Pics - 20.jpeg";
+import Image12 from "@images/Promo-Pics - 25.jpeg";
+import Image5 from "@images/Promo-Pics - 39.jpeg";
+import Image4 from "@images/Promo-Pics - 42.jpeg";
+
 import NextImage from "next/image";
 
-import {
-  Box,
-  type ChakraProps,
-  SimpleGrid,
-  type ThemingProps,
-  useBreakpointValue,
-} from "@chakra-ui/react";
+import { useBreakpointValue } from "@chakra-ui/media-query";
+import { Box, SimpleGrid } from "@chakra-ui/react";
 
-const imageUrls = [
-  "/images/photo-booth - 9.jpeg",
-  "/images/Promo-Pics - 10.jpeg",
-  "/images/photo-booth - 32.jpeg",
-  "/images/Promo-Pics - 42.jpeg",
-  "/images/Promo-Pics - 39.jpeg",
-  "/images/photo-booth-7.jpeg",
-  "/images/Promo-Pics - 1 .jpeg",
-  "/images/photo-booth - 20.jpeg",
-  "/images/photo-booth - 16.jpeg",
-  "/images/Promo-Pics - 20.jpeg",
-  "/images/photo-booth - 22.jpeg",
-  "/images/Promo-Pics - 25.jpeg",
-];
-
-export function ImageGrid({ imageUrls }: { imageUrls: string[] }) {
+export function ImageGrid() {
   const mobileHidden = useBreakpointValue({ base: true, sm: false });
 
   return (
     <>
       <SimpleGrid columns={{ sm: 2, md: 3, lg: 4 }} spacing={0}>
-        {imageUrls.map((imageUrl, index) => {
-          if (index > 3 && mobileHidden) {
-            return null;
-          }
-          return (
-            <div key={imageUrl + index}>
-              <NextImage
-                src={imageUrl}
-                alt="Photo Booth Rental Sample Images"
-                sizes="(min-width: 60em) 24vw,
+        {(!mobileHidden || (mobileHidden && 0 <= 3)) && (
+          <div>
+            <NextImage
+              src={Image1}
+              alt="Photo Booth Rental Sample Images"
+              sizes="(min-width: 60em) 24vw,
                     (min-width: 28em) 45vw,
                     100vw"
+              width={300}
+              height={200}
+              objectFit="cover"
+              layout="responsive"
+            />
+          </div>
+        )}
+        {(!mobileHidden || (mobileHidden && 1 <= 3)) && (
+          <div>
+            <NextImage
+              src={Image2}
+              alt="Photo Booth Rental Sample Images"
+              sizes="(min-width: 60em) 24vw,
+                    (min-width: 28em) 45vw,
+                    100vw"
+              width={300}
+              height={200}
+              objectFit="cover"
+              layout="responsive"
+            />
+          </div>
+        )}
+        {(!mobileHidden || (mobileHidden && 2 <= 3)) && (
+          <div>
+            <NextImage
+              src={Image3}
+              alt="Photo Booth Rental Sample Images"
+              sizes="(min-width: 60em) 24vw,
+                    (min-width: 28em) 45vw,
+                    100vw"
+              width={300}
+              height={200}
+              objectFit="cover"
+              layout="responsive"
+            />
+          </div>
+        )}
+        {(!mobileHidden || (mobileHidden && 3 <= 3)) && (
+          <div>
+            <NextImage
+              src={Image4}
+              alt="Photo Booth Rental Sample Images"
+              sizes="(min-width: 60em) 24vw,
+                    (min-width: 28em) 45vw,
+                    100vw"
+              width={300}
+              height={200}
+              objectFit="cover"
+              layout="responsive"
+            />
+          </div>
+        )}
+        {!mobileHidden && (
+          <>
+            <div>
+              <NextImage
+                src={Image5}
+                alt="Photo Booth Rental Sample Images"
+                sizes="(min-width: 60em) 24vw,
+                      (min-width: 28em) 45vw,
+                      100vw"
                 width={300}
                 height={200}
                 objectFit="cover"
                 layout="responsive"
               />
             </div>
-          );
-        })}
+            <div>
+              <NextImage
+                src={Image6}
+                alt="Photo Booth Rental Sample Images"
+                sizes="(min-width: 60em) 24vw,
+                      (min-width: 28em) 45vw,
+                      100vw"
+                width={300}
+                height={200}
+                objectFit="cover"
+                layout="responsive"
+              />
+            </div>
+            <div>
+              <NextImage
+                src={Image7}
+                alt="Photo Booth Rental Sample Images"
+                sizes="(min-width: 60em) 24vw,
+                      (min-width: 28em) 45vw,
+                      100vw"
+                width={300}
+                height={200}
+                objectFit="cover"
+                layout="responsive"
+              />
+            </div>
+            <div>
+              <NextImage
+                src={Image8}
+                alt="Photo Booth Rental Sample Images"
+                sizes="(min-width: 60em) 24vw,
+                      (min-width: 28em) 45vw,
+                      100vw"
+                width={300}
+                height={200}
+                objectFit="cover"
+                layout="responsive"
+              />
+            </div>
+            <div>
+              <NextImage
+                src={Image9}
+                alt="Photo Booth Rental Sample Images"
+                sizes="(min-width: 60em) 24vw,
+                      (min-width: 28em) 45vw,
+                      100vw"
+                width={300}
+                height={200}
+                objectFit="cover"
+                layout="responsive"
+              />
+            </div>
+            <div>
+              <NextImage
+                src={Image10}
+                alt="Photo Booth Rental Sample Images"
+                sizes="(min-width: 60em) 24vw,
+                      (min-width: 28em) 45vw,
+                      100vw"
+                width={300}
+                height={200}
+                objectFit="cover"
+                layout="responsive"
+              />
+            </div>
+            <div>
+              <NextImage
+                src={Image11}
+                alt="Photo Booth Rental Sample Images"
+                sizes="(min-width: 60em) 24vw,
+                      (min-width: 28em) 45vw,
+                      100vw"
+                width={300}
+                height={200}
+                objectFit="cover"
+                layout="responsive"
+              />
+            </div>
+            <div>
+              <NextImage
+                src={Image12}
+                alt="Photo Booth Rental Sample Images"
+                sizes="(min-width: 60em) 24vw,
+                      (min-width: 28em) 45vw,
+                      100vw"
+                width={300}
+                height={200}
+                objectFit="cover"
+                layout="responsive"
+              />
+            </div>
+          </>
+        )}
       </SimpleGrid>
     </>
   );
@@ -63,7 +204,7 @@ export const OurWorkSection: React.FC<ChakraProps & ThemingProps> = () => {
       p={0}
       style={{ marginTop: "0", marginBottom: "0" }}
     >
-      <ImageGrid imageUrls={imageUrls} />
+      <ImageGrid />
     </Box>
   );
 };

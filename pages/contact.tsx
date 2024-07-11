@@ -1,5 +1,8 @@
 import React, { useEffect } from "react";
 
+// eslint-disable-next-line import/no-unresolved
+import { addForm } from "@utils/honeybook";
+
 import { NextSeo } from "next-seo";
 
 import {
@@ -12,17 +15,9 @@ import {
   VStack,
 } from "@chakra-ui/react";
 
-const BookABooth = () => {
+const ContactUs = () => {
   useEffect(() => {
-    const scriptId = "honeybook";
-
-    if (!document.getElementById(scriptId)) {
-      const script = document.createElement("script");
-      script.id = scriptId;
-      script.innerHTML =
-        '(function(h,b,s,n,i,p,e,t) {\r\n    h._HB_ = h._HB_ || {};h._HB_.pid = i;;;;\r\n    t=b.createElement(s);t.type="text/javascript";t.async=!0;t.src=n;\r\n    e=b.getElementsByTagName(s)[0];e.parentNode.insertBefore(t,e);\r\n})(window,document,"script","https://widget.honeybook.com/assets_users_production/websiteplacements/placement-controller.min.js","63632202e0a3290007104a56")';
-      document.body.appendChild(script);
-    }
+    const scriptId = addForm("63632202e0a3290007104a56");
 
     return () => {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -125,7 +120,7 @@ const ContactPage: React.FC = () => {
             p={[4, 8, 10, 0]}
             bg={useColorModeValue("white", "gray.700")}
           >
-            <BookABooth />
+            <ContactUs />
           </Box>
           <Box
             rounded="2xl"

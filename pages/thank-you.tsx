@@ -48,7 +48,7 @@ const TermsPage: React.FC = (): JSX.Element => {
         noindex={true}
       />
       <chakra.main>
-        <PageTitle {...headingStyle} body=" " title="Thank you for booking." />
+        <PageTitle {...headingStyle} body=" " title="Thank you" />
       </chakra.main>
     </>
   );

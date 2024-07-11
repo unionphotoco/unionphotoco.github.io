@@ -29,6 +29,10 @@ declare module "@react-icons" {
   export * from "react-icons-all/all";
 }
 
+interface Window {
+  _HB_: unknown;
+}
+
 interface ImageObject {
   src: string;
   srcSet?: string;

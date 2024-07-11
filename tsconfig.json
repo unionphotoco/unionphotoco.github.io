@@ -31,8 +31,11 @@
       "@public/*": ["public/*"],
       "@styles": ["src/styles"],
       "@styles/*": ["src/styles/*"],
+      "@images/*": ["public/images/*"],
       "@test": ["test"],
-      "@test/*": ["test/*"]
+      "@test/*": ["test/*"],
+      "@utils": ["src/utils"],
+      "@utils/*": ["src/utils/*"]
     },
     "incremental": true
   },
