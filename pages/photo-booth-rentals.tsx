@@ -30,6 +30,9 @@ const LazyHowItWorksSection = dynamic(
 const LazyTestimonialSection = dynamic(
   () => import("@components/section/testimonials"),
 );
+const LazyClientSection = dynamic(
+  () => import("@components/section/ourclients"),
+);
 
 const Home1Page: React.FC = () => (
   <>
@@ -46,6 +49,7 @@ const Home1Page: React.FC = () => (
           <LazyOurWorkSection />
           <LazyHowItWorksSection />
           <LazyTestimonialSection />
+          <LazyClientSection />
           <LazyPricingSection />
           <LazyBookNowSection />
         </VStack>
