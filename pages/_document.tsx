@@ -10,7 +10,6 @@ import Document, {
   Main,
   NextScript,
 } from "next/document";
-
 import Script from "next/script";
 
 import { ColorModeScript } from "@chakra-ui/react";
