@@ -11,6 +11,8 @@ import Document, {
   NextScript,
 } from "next/document";
 
+import Script from "next/script";
+
 import { ColorModeScript } from "@chakra-ui/react";
 
 import theme from "@definitions/chakra/theme";
@@ -25,6 +27,11 @@ class CustomDocument extends Document {
       <Html lang="en">
         <Head />
         <body>
+          <Script
+            id="mcjs"
+            src="https://chimpstatic.com/mcjs-connected/js/users/aaf7f1b37f1adff9aa681e36b/53a03101ea9c6cad8d7367114.js"
+            strategy="afterInteractive"
+          />
           <ColorModeScript initialColorMode={theme.config.initialColorMode} />
           <Main />
           <NextScript />
