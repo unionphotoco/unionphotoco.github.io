@@ -6,7 +6,6 @@ import { useRouter } from "next/router";
 import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
 import {
   Box,
-  type ChakraProps,
   Collapse,
   Container,
   Flex,
@@ -14,12 +13,11 @@ import {
   IconButton,
   Link,
   Text,
-  type ThemingProps,
   useColorModeValue,
   useDisclosure,
 } from "@chakra-ui/react";
+import type { ChakraProps, ThemingProps } from "@chakra-ui/react";
 
-// import type { ChakraProps, ThemingProps } from "@chakra-ui/react";
 import MAIN_NAV_ITEMS from "@definitions/navigation/main";
 
 import Logo, { Logo2 } from "@components/logo";
