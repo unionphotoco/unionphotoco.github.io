@@ -34,7 +34,7 @@ const Home1Page: React.FC = () => (
       <Center>
         <VStack spacing={20} maxW="1680">
           <LazyOurWorkSection />
-         <LazyHowItWorksSection />
+          <LazyHowItWorksSection />
           <LazyTestimonialSection />
           <LazyClientSection />
           <LazyPricingSection />

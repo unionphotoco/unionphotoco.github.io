@@ -7,12 +7,22 @@ module.exports = {
   additionalPaths: async (config) => {
     const result = [];
 
-    result.push({ loc: "/locations" });
+    result.push({ 
+      loc: "/locations",
+      lastmod: new Date().toISOString(),
+      changefreq: "weekly",
+      priority: 0.8,
+    });
 
     // Dynamically generate paths based on cities data
     const cities = Object.values(citiesData);
     cities.forEach((city) => {
-      result.push({ loc: `/locations/${city.name.toLowerCase()}` });
+      result.push({ 
+        loc: `/locations/${city.name.toLowerCase()}`,
+        lastmod: new Date().toISOString(),
+        changefreq: "monthly",
+        priority: 0.7,
+      });
     });
 
     return result;

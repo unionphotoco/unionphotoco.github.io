@@ -21,8 +21,13 @@ import {
 
 const LazyBookNowSection = dynamic(() => import("@components/section/booknow"));
 
+interface City {
+  name: string;
+  description: string;
+}
+
 interface LocationCardProps {
-  city: any;
+  city: City;
   citySlug: string;
 }
 
@@ -85,7 +90,7 @@ const LocationCard: React.FC<LocationCardProps> = ({ city, citySlug }) => {
 };
 
 interface LocationsPageProps {
-  cities: Record<string, any>;
+  cities: Record<string, City>;
 }
 
 const LocationsPage: React.FC<LocationsPageProps> = ({ cities }) => {
