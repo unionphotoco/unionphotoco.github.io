@@ -62,18 +62,12 @@ const BookNowSection = ({ city }: { city?: string | null }) => {
             </Box>
           </VStack>
         </Flex>
-        <Box minH={600} position="relative">
-          <AspectRatio ratio={4 / 3} width="full" height="full">
-            <Image
-              src="/images/photo-collage.jpg"
-              alt="Photo booth collage"
-              width={800}
-              height={600}
-              objectFit="cover"
-              objectPosition="center"
-            />
-          </AspectRatio>
-        </Box>
+        <Box
+          bgImage="url('/images/photo-collage.jpg')"
+          bgPosition="center"
+          bgSize="contain"
+          minH={600}
+        />
       </Grid>
     </Box>
   );
