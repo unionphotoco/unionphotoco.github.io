@@ -13,183 +13,168 @@ import Image4 from "@images/Promo-Pics - 42.jpeg";
 
 import NextImage from "next/image";
 
-import { useBreakpointValue } from "@chakra-ui/media-query";
 import { Box, SimpleGrid } from "@chakra-ui/react";
 
 export function ImageGrid() {
-  const mobileHidden = useBreakpointValue({ base: true, sm: false });
-
   return (
     <>
       <SimpleGrid columns={{ sm: 2, md: 3, lg: 4 }} spacing={0}>
-        {(!mobileHidden || (mobileHidden && 0 <= 3)) && (
-          <div>
-            <NextImage
-              src={Image1}
-              alt="Photo Booth Rental Sample Images"
-              sizes="(min-width: 60em) 24vw,
-                    (min-width: 28em) 45vw,
-                    100vw"
-              width={300}
-              height={200}
-              objectFit="cover"
-              layout="responsive"
-            />
-          </div>
-        )}
-        {(!mobileHidden || (mobileHidden && 1 <= 3)) && (
-          <div>
-            <NextImage
-              src={Image2}
-              alt="Photo Booth Rental Sample Images"
-              sizes="(min-width: 60em) 24vw,
-                    (min-width: 28em) 45vw,
-                    100vw"
-              width={300}
-              height={200}
-              objectFit="cover"
-              layout="responsive"
-            />
-          </div>
-        )}
-        {(!mobileHidden || (mobileHidden && 2 <= 3)) && (
-          <div>
-            <NextImage
-              src={Image3}
-              alt="Photo Booth Rental Sample Images"
-              sizes="(min-width: 60em) 24vw,
-                    (min-width: 28em) 45vw,
-                    100vw"
-              width={300}
-              height={200}
-              objectFit="cover"
-              layout="responsive"
-            />
-          </div>
-        )}
-        {(!mobileHidden || (mobileHidden && 3 <= 3)) && (
-          <div>
-            <NextImage
-              src={Image4}
-              alt="Photo Booth Rental Sample Images"
-              sizes="(min-width: 60em) 24vw,
-                    (min-width: 28em) 45vw,
-                    100vw"
-              width={300}
-              height={200}
-              objectFit="cover"
-              layout="responsive"
-            />
-          </div>
-        )}
-        {!mobileHidden && (
-          <>
-            <div>
-              <NextImage
-                src={Image5}
-                alt="Photo Booth Rental Sample Images"
-                sizes="(min-width: 60em) 24vw,
-                      (min-width: 28em) 45vw,
-                      100vw"
-                width={300}
-                height={200}
-                objectFit="cover"
-                layout="responsive"
-              />
-            </div>
-            <div>
-              <NextImage
-                src={Image6}
-                alt="Photo Booth Rental Sample Images"
-                sizes="(min-width: 60em) 24vw,
-                      (min-width: 28em) 45vw,
-                      100vw"
-                width={300}
-                height={200}
-                objectFit="cover"
-                layout="responsive"
-              />
-            </div>
-            <div>
-              <NextImage
-                src={Image7}
-                alt="Photo Booth Rental Sample Images"
-                sizes="(min-width: 60em) 24vw,
-                      (min-width: 28em) 45vw,
-                      100vw"
-                width={300}
-                height={200}
-                objectFit="cover"
-                layout="responsive"
-              />
-            </div>
-            <div>
-              <NextImage
-                src={Image8}
-                alt="Photo Booth Rental Sample Images"
-                sizes="(min-width: 60em) 24vw,
-                      (min-width: 28em) 45vw,
-                      100vw"
-                width={300}
-                height={200}
-                objectFit="cover"
-                layout="responsive"
-              />
-            </div>
-            <div>
-              <NextImage
-                src={Image9}
-                alt="Photo Booth Rental Sample Images"
-                sizes="(min-width: 60em) 24vw,
-                      (min-width: 28em) 45vw,
-                      100vw"
-                width={300}
-                height={200}
-                objectFit="cover"
-                layout="responsive"
-              />
-            </div>
-            <div>
-              <NextImage
-                src={Image10}
-                alt="Photo Booth Rental Sample Images"
-                sizes="(min-width: 60em) 24vw,
-                      (min-width: 28em) 45vw,
-                      100vw"
-                width={300}
-                height={200}
-                objectFit="cover"
-                layout="responsive"
-              />
-            </div>
-            <div>
-              <NextImage
-                src={Image11}
-                alt="Photo Booth Rental Sample Images"
-                sizes="(min-width: 60em) 24vw,
-                      (min-width: 28em) 45vw,
-                      100vw"
-                width={300}
-                height={200}
-                objectFit="cover"
-                layout="responsive"
-              />
-            </div>
-            <div>
-              <NextImage
-                src={Image12}
-                alt="Photo Booth Rental Sample Images"
-                sizes="(min-width: 60em) 24vw,
-                      (min-width: 28em) 45vw,
-                      100vw"
-                width={300}
-                height={200}
-                objectFit="cover"
-                layout="responsive"
-              />
-            </div>
-          </>
-        )}
+        <div>
+          <NextImage
+            src={Image1}
+            alt="Photo Booth Rental Sample Images"
+            sizes="(min-width: 60em) 24vw,
+                  (min-width: 28em) 45vw,
+                  100vw"
+            width={300}
+            height={200}
+            objectFit="cover"
+            layout="responsive"
+          />
+        </div>
+        <div>
+          <NextImage
+            src={Image2}
+            alt="Photo Booth Rental Sample Images"
+            sizes="(min-width: 60em) 24vw,
+                  (min-width: 28em) 45vw,
+                  100vw"
+            width={300}
+            height={200}
+            objectFit="cover"
+            layout="responsive"
+          />
+        </div>
+        <div>
+          <NextImage
+            src={Image3}
+            alt="Photo Booth Rental Sample Images"
+            sizes="(min-width: 60em) 24vw,
+                  (min-width: 28em) 45vw,
+                  100vw"
+            width={300}
+            height={200}
+            objectFit="cover"
+            layout="responsive"
+          />
+        </div>
+        <div>
+          <NextImage
+            src={Image4}
+            alt="Photo Booth Rental Sample Images"
+            sizes="(min-width: 60em) 24vw,
+                  (min-width: 28em) 45vw,
+                  100vw"
+            width={300}
+            height={200}
+            objectFit="cover"
+            layout="responsive"
+          />
+        </div>
+        <div>
+          <NextImage
+            src={Image5}
+            alt="Photo Booth Rental Sample Images"
+            sizes="(min-width: 60em) 24vw,
+                  (min-width: 28em) 45vw,
+                  100vw"
+            width={300}
+            height={200}
+            objectFit="cover"
+            layout="responsive"
+          />
+        </div>
+        <div>
+          <NextImage
+            src={Image6}
+            alt="Photo Booth Rental Sample Images"
+            sizes="(min-width: 60em) 24vw,
+                  (min-width: 28em) 45vw,
+                  100vw"
+            width={300}
+            height={200}
+            objectFit="cover"
+            layout="responsive"
+          />
+        </div>
+        <div>
+          <NextImage
+            src={Image7}
+            alt="Photo Booth Rental Sample Images"
+            sizes="(min-width: 60em) 24vw,
+                  (min-width: 28em) 45vw,
+                  100vw"
+            width={300}
+            height={200}
+            objectFit="cover"
+            layout="responsive"
+          />
+        </div>
+        <div>
+          <NextImage
+            src={Image8}
+            alt="Photo Booth Rental Sample Images"
+            sizes="(min-width: 60em) 24vw,
+                  (min-width: 28em) 45vw,
+                  100vw"
+            width={300}
+            height={200}
+            objectFit="cover"
+            layout="responsive"
+          />
+        </div>
+        <div>
+          <NextImage
+            src={Image9}
+            alt="Photo Booth Rental Sample Images"
+            sizes="(min-width: 60em) 24vw,
+                  (min-width: 28em) 45vw,
+                  100vw"
+            width={300}
+            height={200}
+            objectFit="cover"
+            layout="responsive"
+          />
+        </div>
+        <div>
+          <NextImage
+            src={Image10}
+            alt="Photo Booth Rental Sample Images"
+            sizes="(min-width: 60em) 24vw,
+                  (min-width: 28em) 45vw,
+                  100vw"
+            width={300}
+            height={200}
+            objectFit="cover"
+            layout="responsive"
+          />
+        </div>
+        <div>
+          <NextImage
+            src={Image11}
+            alt="Photo Booth Rental Sample Images"
+            sizes="(min-width: 60em) 24vw,
+                  (min-width: 28em) 45vw,
+                  100vw"
+            width={300}
+            height={200}
+            objectFit="cover"
+            layout="responsive"
+          />
+        </div>
+        <div>
+          <NextImage
+            src={Image12}
+            alt="Photo Booth Rental Sample Images"
+            sizes="(min-width: 60em) 24vw,
+                  (min-width: 28em) 45vw,
+                  100vw"
+            width={300}
+            height={200}
+            objectFit="cover"
+            layout="responsive"
+          />
+        </div>
       </SimpleGrid>
     </>
   );

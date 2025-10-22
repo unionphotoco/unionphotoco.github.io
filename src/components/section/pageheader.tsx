@@ -74,8 +74,8 @@ export const PageHeader: React.FC = () => {
                 <Image
                   src={heroImage}
                   alt="Digital Photo Booth Experience"
-                  width={600}
-                  height={450}
+                  width={800}
+                  height={600}
                   objectFit="cover"
                   objectPosition="center"
                 />

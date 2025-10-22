@@ -18,9 +18,9 @@ import {
   HStack,
   Progress,
   useMediaQuery,
+  useTheme,
   VStack,
 } from "@chakra-ui/react";
-import { useTheme } from "@chakra-ui/system";
 
 import useBoundingRect from "@definitions/hooks/useBoundingRect";
 import percentage from "@definitions/utils/percentage";
