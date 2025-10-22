@@ -1,11 +1,8 @@
-import { CityData, getAllCitiesData, getCityBySlug } from "@utils/cities";
-
 import * as React from "react";
 
 import { GetStaticPaths, GetStaticProps } from "next";
 import { NextSeo } from "next-seo";
 import dynamic from "next/dynamic";
-import Link from "next/link";
 
 import {
   AspectRatio,
@@ -18,15 +15,37 @@ import {
   VStack,
 } from "@chakra-ui/react";
 
+import {
+  CityData,
+  getAllCitiesData,
+  getCityBySlug,
+} from "../../src/utils/cities";
+
 const LazyPageHeaderCitySection = dynamic(
-  () => import("@components/section/pageheadercity"),
+  () =>
+    import("../../src/components/section/pageheadercity").then((mod) => ({
+      default: mod.PageHeaderCitySection,
+    })),
+  { ssr: false },
 );
 const LazyYoureLookingGoodSection = dynamic(
-  () => import("@components/section/yourelookinggood"),
+  () =>
+    import("../../src/components/section/yourelookinggood").then((mod) => ({
+      default: mod.YoureLookingGoodSection,
+    })),
+  { ssr: false },
 );
-const LazyBookNowSection = dynamic(() => import("@components/section/booknow"));
-const LazyPricingSection = dynamic(() => import("@components/section/pricing"));
-const LazyImage = dynamic(() => import("@components/image"));
+const LazyBookNowSection = dynamic(
+  () => import("../../src/components/section/booknow"),
+  { ssr: false },
+);
+const LazyPricingSection = dynamic(
+  () => import("../../src/components/section/pricing"),
+  { ssr: false },
+);
+const LazyImage = dynamic(() => import("../../src/components/image"), {
+  ssr: false,
+});
 
 interface CityPageProps {
   city: CityData;

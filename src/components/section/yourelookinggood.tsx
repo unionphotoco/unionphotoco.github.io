@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 
 import {
   AspectRatio,
@@ -10,8 +10,8 @@ import {
   VStack,
 } from "@chakra-ui/react";
 
-import BookNowButton from "@components/button/booknowbutton";
-import Image from "@components/image";
+import BookNowButton from "../button/booknowbutton";
+import Image from "../image";
 
 interface YoureLookingGoodSectionProps {
   cityName: string;
