@@ -41,7 +41,7 @@
     "react-dom": "18.2.0",
     "react-hook-form": "^7.37.0",
     "react-icons-all": "^4.5.1",
-    "react-icons-all-files": "github:alisamar/react-icons-all-files#4.5.1",
+    "react-icons-all-files": "https://github.com/alisamar/react-icons-all-files.git#4.5.1",
     "react-input-mask": "^2.0.4",
     "react-intersection-observer": "^9.4.0",
     "react-intersection-observer-hook": "^2.0.4",
