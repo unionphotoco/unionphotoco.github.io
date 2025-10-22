@@ -90,3 +90,5 @@ export const PageHeaderCitySection: React.FC<{
     </Container>
   );
 };
+
+export default PageHeaderCitySection;

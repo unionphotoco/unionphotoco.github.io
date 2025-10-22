@@ -22,30 +22,18 @@ import {
 } from "../../src/utils/cities";
 
 const LazyPageHeaderCitySection = dynamic(
-  () =>
-    import("../../src/components/section/pageheadercity").then((mod) => ({
-      default: mod.PageHeaderCitySection,
-    })),
-  { ssr: false },
+  () => import("../../src/components/section/pageheadercity"),
 );
 const LazyYoureLookingGoodSection = dynamic(
-  () =>
-    import("../../src/components/section/yourelookinggood").then((mod) => ({
-      default: mod.YoureLookingGoodSection,
-    })),
-  { ssr: false },
+  () => import("../../src/components/section/yourelookinggood"),
 );
 const LazyBookNowSection = dynamic(
   () => import("../../src/components/section/booknow"),
-  { ssr: false },
 );
 const LazyPricingSection = dynamic(
   () => import("../../src/components/section/pricing"),
-  { ssr: false },
 );
-const LazyImage = dynamic(() => import("../../src/components/image"), {
-  ssr: false,
-});
+const LazyImage = dynamic(() => import("../../src/components/image"));
 
 interface CityPageProps {
   city: CityData;
