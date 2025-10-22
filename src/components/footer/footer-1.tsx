@@ -142,7 +142,15 @@ const Footer1: React.FC<ChakraProps & ThemingProps> = ({ ...rest }) => {
                   align="stretch"
                   spacing={[2, 2, 4]}
                 >
-                  <Text fontWeight="semibold">{item.title}</Text>
+                  {item.href && item.href !== "#" ? (
+                    <NextLink href={item.href} passHref>
+                      <Link fontWeight="semibold" {...linkStyle}>
+                        {item.title}
+                      </Link>
+                    </NextLink>
+                  ) : (
+                    <Text fontWeight="semibold">{item.title}</Text>
+                  )}
                   {item.subitems && (
                     <List spacing={[2]}>
                       {item.subitems.map((subitem, sidx) => (

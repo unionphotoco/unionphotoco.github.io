@@ -1,0 +1,184 @@
+{
+  "bellevue": {
+    "name": "Bellevue",
+    "state": "Washington",
+    "description": "Bellevue is best known for its tech companies and Bellevue Square.",
+    "population": "151854",
+    "area": "33.5 sq mi",
+    "founded": "1869",
+    "county": "King County",
+    "timezone": "Pacific Time (PT)",
+    "coordinates": {
+      "lat": 47.6101,
+      "lng": -122.2015
+    },
+    "attractions": [
+      "Bellevue Square",
+      "Bellevue Arts Museum",
+      "Mercer Slough Nature Park",
+      "Bellevue Botanical Garden"
+    ],
+    "services": [
+      "Photo booth rentals",
+      "Event photography",
+      "Corporate events",
+      "Wedding photography"
+    ]
+  },
+  "seattle": {
+    "name": "Seattle",
+    "state": "Washington",
+    "description": "Seattle is a seaport city on the West Coast of the United States. Birthplace of Amazon and Starbucks.",
+    "population": "737015",
+    "area": "142.5 sq mi",
+    "founded": "1851",
+    "county": "King County",
+    "timezone": "Pacific Time (PT)",
+    "coordinates": {
+      "lat": 47.6062,
+      "lng": -122.3321
+    },
+    "attractions": [
+      "Space Needle",
+      "Pike Place Market",
+      "Seattle Aquarium",
+      "Museum of Pop Culture"
+    ],
+    "services": [
+      "Photo booth rentals",
+      "Event photography",
+      "Corporate events",
+      "Wedding photography"
+    ]
+  },
+  "redmond": {
+    "name": "Redmond",
+    "state": "Washington",
+    "description": "Redmond is best known as the home of Microsoft and Nintendo of America.",
+    "population": "73256",
+    "area": "16.4 sq mi",
+    "founded": "1870",
+    "county": "King County",
+    "timezone": "Pacific Time (PT)",
+    "coordinates": {
+      "lat": 47.6740,
+      "lng": -122.1215
+    },
+    "attractions": [
+      "Marymoor Park",
+      "Redmond Town Center",
+      "Sammamish River Trail",
+      "Microsoft Visitor Center"
+    ],
+    "services": [
+      "Photo booth rentals",
+      "Event photography",
+      "Corporate events",
+      "Wedding photography"
+    ]
+  },
+  "kirkland": {
+    "name": "Kirkland",
+    "state": "Washington",
+    "description": "Kirkland is known for its waterfront parks, downtown area, and Google.",
+    "population": "92175",
+    "area": "11.0 sq mi",
+    "founded": "1888",
+    "county": "King County",
+    "timezone": "Pacific Time (PT)",
+    "coordinates": {
+      "lat": 47.6768,
+      "lng": -122.2059
+    },
+    "attractions": [
+      "Kirkland Waterfront",
+      "Juanita Beach Park",
+      "Kirkland Arts Center",
+      "Heritage Park"
+    ],
+    "services": [
+      "Photo booth rentals",
+      "Event photography",
+      "Corporate events",
+      "Wedding photography"
+    ]
+  },
+  "woodinville": {
+    "name": "Woodinville",
+    "state": "Washington",
+    "description": "Woodinville is known for its wine industry, with over 100 wineries and tasting rooms, making it a popular destination for wine enthusiasts.",
+    "population": "13069",
+    "area": "5.6 sq mi",
+    "founded": "1909",
+    "county": "King County",
+    "timezone": "Pacific Time (PT)",
+    "coordinates": {
+      "lat": 47.7544,
+      "lng": -122.1635
+    },
+    "attractions": [
+      "Chateau Ste. Michelle Winery",
+      "Columbia Winery",
+      "Woodinville Wine Country",
+      "Sammamish River Trail"
+    ],
+    "services": [
+      "Photo booth rentals",
+      "Event photography",
+      "Corporate events",
+      "Wedding photography"
+    ]
+  },
+  "snohomish": {
+    "name": "Snohomish",
+    "state": "Washington",
+    "description": "Snohomish is known for its historic downtown area, antique shops, and the Snohomish River. It's often called the 'Antique Capital of the Northwest'.",
+    "population": "10126",
+    "area": "3.4 sq mi",
+    "founded": "1859",
+    "county": "Snohomish County",
+    "timezone": "Pacific Time (PT)",
+    "coordinates": {
+      "lat": 47.9129,
+      "lng": -122.0982
+    },
+    "attractions": [
+      "Historic Downtown Snohomish",
+      "Snohomish River",
+      "Snohomish County Centennial Trail",
+      "Antique shops and galleries"
+    ],
+    "services": [
+      "Photo booth rentals",
+      "Event photography",
+      "Corporate events",
+      "Wedding photography"
+    ]
+  },
+  "everett": {
+    "name": "Everett",
+    "state": "Washington",
+    "description": "Everett is home to Boeing's largest assembly plant and serves as the northern terminus of the Sounder commuter rail service.",
+    "population": "110629",
+    "area": "33.3 sq mi",
+    "founded": "1893",
+    "county": "Snohomish County",
+    "timezone": "Pacific Time (PT)",
+    "coordinates": {
+      "lat": 47.9789,
+      "lng": -122.2021
+    },
+    "attractions": [
+      "Boeing Everett Factory",
+      "Everett Marina",
+      "Imagine Children's Museum",
+      "Everett Performing Arts Center"
+    ],
+    "services": [
+      "Photo booth rentals",
+      "Event photography",
+      "Corporate events",
+      "Wedding photography"
+    ]
+  }
+}

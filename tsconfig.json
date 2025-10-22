@@ -25,6 +25,8 @@
       "@components/*": ["src/components/*"],
       "@definitions": ["src/definitions"],
       "@definitions/*": ["src/definitions/*"],
+      "@data/*": ["data/*"],
+      "@data": ["data"],
       "@layouts": ["src/layouts"],
       "@layouts/*": ["src/layouts/*"],
       "@public": ["public"],
@@ -34,7 +36,8 @@
       "@images/*": ["public/images/*"],
       "@test": ["test"],
       "@test/*": ["test/*"],
-      "@utils/*": ["src/utils/*"]
+      "@utils/*": ["src/utils/*"],
+      "@utils": ["src/utils"]
     },
     "incremental": true
   },

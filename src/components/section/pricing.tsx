@@ -25,7 +25,7 @@ export const PricingSection: React.FC<ChakraProps & ThemingProps> = () => {
       background={useColorModeValue("#EBE7DE", "gray.700")}
     >
       <Heading as="h2" size="lg" textAlign="center" mb="2rem">
-        Pricing
+        Our Photo Booth Services
       </Heading>
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
         <Box
@@ -46,11 +46,11 @@ export const PricingSection: React.FC<ChakraProps & ThemingProps> = () => {
             borderTop="1px solid grey"
             borderBottom="1px solid grey"
           >
-            <ListItem mb="1">Starting at $350</ListItem>
+            <ListItem mb="1">Starting at $400</ListItem>
             <ListItem mb="1">24 hour rental</ListItem>
             <ListItem mb="1">Unlimited photo and GIF sessions</ListItem>
             <ListItem mb="1">Instant sharing via Airdrop or QR code</ListItem>
-            <ListItem mb="1">Set up, tear down and delivery is extra</ListItem>
+            <ListItem mb="1">Set up, tear down and delivery included</ListItem>
             <ListItem mb="1">
               Online gallery of event photos after 48 hours
             </ListItem>
@@ -78,7 +78,7 @@ export const PricingSection: React.FC<ChakraProps & ThemingProps> = () => {
             borderTop="1px solid grey"
             borderBottom="1px solid grey"
           >
-            <ListItem mb="1">Starting at $895</ListItem>
+            <ListItem mb="1">Starting at $995</ListItem>
             <ListItem mb="1">3 hours included</ListItem>
             <ListItem fontWeight="bold" mb="1">
               Studio quality photos and lighting
@@ -118,7 +118,7 @@ export const PricingSection: React.FC<ChakraProps & ThemingProps> = () => {
             borderTop="1px solid grey"
             borderBottom="1px solid grey"
           >
-            <ListItem mb="1">Starting at $1095</ListItem>
+            <ListItem mb="1">Starting at $1195</ListItem>
             <ListItem fontWeight="bold" mb="1">
               4 hours included
             </ListItem>

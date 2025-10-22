@@ -24,6 +24,7 @@ const Home1Page: React.FC = () => {
       <NextSeo
         title="Bellevue Photo Booth Rentals"
         description="Union Photo Co. is a photo booth rental company serving Snohomish County and King County. Book now 833.360.3679."
+        canonical="https://www.unionphotoco.com/"
       />
       <chakra.main>
         <VStack align="stretch" spacing={20}>

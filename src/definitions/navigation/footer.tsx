@@ -1,3 +1,4 @@
+import { getCitiesData } from "@utils/cities";
 import { IconType } from "react-icons-all";
 
 type T_NavItem = {
@@ -10,6 +11,8 @@ interface T_NavItems extends T_NavItem {
   subitems: T_NavItem[];
   children?: React.ReactElement;
 }
+
+const citiesData = getCitiesData();
 
 const MenuItems = [
   {
@@ -73,36 +76,21 @@ const SocialItems = [
 ];
 
 const NavigationItems: T_NavItems[] = [
-  // {
-  //   title: "Location Served",
-  //   href: "#",
-  //   subitems: HomePageItems,
-  // },
-  // {
-  //   title: "Company",
-  //   href: "",
-  //   subitems: CompanyItems,
-  // },
+  {
+    title: "Locations Served",
+    href: "/locations",
+    subitems: citiesData,
+  },
   {
     title: "Quick Links",
     href: "#",
     subitems: MenuItems,
   },
-  // {
-  //   title: "Services",
-  //   href: "#",
-  //   subitems: CommponPageItems,
-  // },
   {
     title: "Social Media",
     href: "",
     subitems: SocialItems,
   },
-  // {
-  //   title: "Terms",
-  //   href: "",
-  //   subitems: CommponPageItems,
-  // },
 ];
 
 export default NavigationItems;

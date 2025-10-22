@@ -3,6 +3,7 @@ import React from "react";
 import NextLink from "next/link";
 
 import {
+  AspectRatio,
   Box,
   Flex,
   Grid,
@@ -15,8 +16,9 @@ import {
 import Site from "@definitions/site";
 
 import BookNowButton from "@components/button/booknowbutton";
+import Image from "@components/image";
 
-const BookNowSection = () => {
+const BookNowSection = ({ city }: { city?: string | null }) => {
   const headerSize = useBreakpointValue({ base: "lg", md: "xl" });
   const textSize = useBreakpointValue({ base: "xl", md: "lg" });
   const year = new Date().getFullYear();
@@ -25,7 +27,6 @@ const BookNowSection = () => {
     <Box as="section" width="full" m={0} style={{ marginTop: 0 }}>
       <Grid templateColumns={{ base: "1fr", md: "1fr 3fr" }} gap={12} mt={0}>
         <Flex
-          //data-aos="fade-left"
           align={["start", "start", "center", "center"]}
           justify={["start", "start", "center", "center"]}
           width="full"
@@ -33,11 +34,18 @@ const BookNowSection = () => {
         >
           <VStack align="start" width="full">
             <Box p={7}>
-              <Heading size={headerSize} as="h3">
-                Looking to book in {year}?
-              </Heading>
+              {city ? (
+                <Heading size={headerSize} as="h3">
+                  Planning an event in {city}, WA?
+                </Heading>
+              ) : (
+                <Heading size={headerSize} as="h3">
+                  Looking to book in {year}?
+                </Heading>
+              )}
               <Text size={textSize} mt={3}>
-                Secure your photo booth rental now. We book up fast!
+                Secure your photo booth rental now. Book early, we sell out
+                fast.
               </Text>
               <BookNowButton />
               <Text size={textSize} mt={3}>
@@ -54,12 +62,18 @@ const BookNowSection = () => {
             </Box>
           </VStack>
         </Flex>
-        <Box
-          bgImage="url('/images/photo-collage.jpg')"
-          bgPosition="center"
-          bgSize="contain"
-          minH={600}
-        />
+        <Box minH={600} position="relative">
+          <AspectRatio ratio={4 / 3} width="full" height="full">
+            <Image
+              src="/images/photo-collage.jpg"
+              alt="Photo booth collage"
+              width={800}
+              height={600}
+              objectFit="cover"
+              objectPosition="center"
+            />
+          </AspectRatio>
+        </Box>
       </Grid>
     </Box>
   );
