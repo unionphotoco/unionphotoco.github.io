@@ -31,6 +31,7 @@ export const getCitiesData = (): CityNavItem[] => {
       ].name.toLowerCase()}`,
     }));
   } catch (error) {
+    // eslint-disable-next-line no-console
     console.error(error);
     return [];
   }

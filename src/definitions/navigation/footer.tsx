@@ -1,4 +1,5 @@
 import { getCitiesData } from "@utils/cities";
+
 import { IconType } from "react-icons-all";
 
 type T_NavItem = {
