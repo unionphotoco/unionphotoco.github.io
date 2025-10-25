@@ -19,6 +19,7 @@ import AOS from "aos";
 
 import { DefaultSeo } from "next-seo";
 import { AppProps } from "next/app";
+import { useRouter } from "next/router";
 
 import { ChakraProvider } from "@chakra-ui/react";
 
@@ -51,6 +52,8 @@ function UnionPhotoCoApp({
   emotionCache = clientSideEmotionCache,
   pageProps,
 }: ComponentWithPageLayout): JSX.Element {
+  const router = useRouter();
+
   useEffect(() => {
     AOS.init({
       easing: "ease-out-cubic",
@@ -58,6 +61,24 @@ function UnionPhotoCoApp({
       offset: 50,
     });
   }, []);
+
+  useEffect(() => {
+    const handleRouteChange = (url: string) => {
+      if (typeof window !== "undefined" && window.dataLayer) {
+        window.dataLayer.push({
+          event: "page_view",
+          page_path: url,
+          page_title: document.title,
+        });
+      }
+    };
+
+    router.events.on("routeChangeComplete", handleRouteChange);
+
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
 
   return (
     <CacheProvider value={emotionCache}>

@@ -31,6 +31,7 @@ declare module "@react-icons" {
 
 interface Window {
   _HB_: unknown;
+  dataLayer: any[];
 }
 
 interface ImageObject {
