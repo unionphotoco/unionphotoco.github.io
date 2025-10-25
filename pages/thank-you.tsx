@@ -1,6 +1,8 @@
+import { useEffect } from "react";
+
 import { NextSeo } from "next-seo";
 
-import { chakra } from "@chakra-ui/react";
+import { chakra, Container, Text } from "@chakra-ui/react";
 
 import PageTitle from "@components/page-title";
 
@@ -12,6 +14,14 @@ const ThankYou: React.FC = (): JSX.Element => {
     mb: 5,
   };
 
+  useEffect(() => {
+    if (typeof window !== "undefined" && window.dataLayer) {
+      window.dataLayer.push({
+        event: "Requested Booking",
+      });
+    }
+  }, []);
+
   return (
     <>
       <NextSeo
@@ -20,7 +30,13 @@ const ThankYou: React.FC = (): JSX.Element => {
         noindex={true}
       />
       <chakra.main>
-        <PageTitle {...headingStyle} body=" " title="Thank you" />
+        <Container maxW="container.lg" paddingBottom="4rem">
+          <PageTitle {...headingStyle} body=" " title="Thank you" />
+          <Text textAlign="center">
+            Thank you for contacting Union Photo Co. We will be in touch
+            shortly.
+          </Text>
+        </Container>
       </chakra.main>
     </>
   );
