@@ -3,7 +3,6 @@ import React from "react";
 import NextLink from "next/link";
 
 import {
-  AspectRatio,
   Box,
   Flex,
   Grid,
@@ -16,7 +15,6 @@ import {
 import Site from "@definitions/site";
 
 import BookNowButton from "@components/button/booknowbutton";
-import Image from "@components/image";
 
 const BookNowSection = ({ city }: { city?: string | null }) => {
   const headerSize = useBreakpointValue({ base: "lg", md: "xl" });
