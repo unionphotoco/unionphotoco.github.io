@@ -24,7 +24,13 @@ class CustomDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head />
+        <Head>
+          <link
+            rel="icon"
+            href="/images/logo/unionphotocoicon2.svg"
+            type="image/svg+xml"
+          />
+        </Head>
         <body>
           <Script
             id="mcjs"
