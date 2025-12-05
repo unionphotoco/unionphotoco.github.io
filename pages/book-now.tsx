@@ -69,7 +69,7 @@ const ContactPage: React.FC = () => {
                 maxW="container.lg"
                 mb="4"
               >
-                Book a Photo Book
+                Book a Photo Booth
               </Heading>
             </VStack>
           </Container>
