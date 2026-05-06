@@ -1,10 +1,19 @@
 // eslint-disable-next-line import/no-unresolved
-import React from "react";
+import { FC } from "react";
 
 import { NextSeo } from "next-seo";
 import dynamic from "next/dynamic";
 
-import { Center, chakra, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Center,
+  chakra,
+  Container,
+  Heading,
+  VStack,
+} from "@chakra-ui/react";
+
+import photoBoothRentalFaqQuestions from "../data/photoBoothRentalFaqQuestions";
 
 const LazyPageHeader = dynamic(() => import("@components/section/pageheader"));
 
@@ -20,8 +29,9 @@ const LazyTestimonialSection = dynamic(
 const LazyClientSection = dynamic(
   () => import("@components/section/ourclients"),
 );
+const LazyFAQSection = dynamic(() => import("@components/section/faq"));
 
-const Home1Page: React.FC = () => (
+const Home1Page: FC = () => (
   <>
     <NextSeo
       title="Bellevue Photo Booth Rentals"
@@ -38,6 +48,17 @@ const Home1Page: React.FC = () => (
           <LazyTestimonialSection />
           <LazyClientSection />
           <LazyPricingSection />
+          <Container maxW="100%" px={4}>
+            <Box maxW="1680" mx="auto" w="full" px={[1, 6, 10]} py={[2, 4, 6]}>
+              <Heading as="h2" size="lg" mb="2rem" textAlign="center">
+                Frequently Asked Questions
+              </Heading>
+              <LazyFAQSection
+                city="seattle"
+                questions={photoBoothRentalFaqQuestions}
+              />
+            </Box>
+          </Container>
           <LazyBookNowSection />
         </VStack>
       </Center>

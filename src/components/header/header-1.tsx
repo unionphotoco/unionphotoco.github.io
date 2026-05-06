@@ -12,7 +12,6 @@ import {
   HStack,
   IconButton,
   Link,
-  Text,
   useColorModeValue,
   useDisclosure,
 } from "@chakra-ui/react";
@@ -78,7 +77,7 @@ const Header1: React.FC<ChakraProps & ThemingProps> = (props) => {
           padding=".5rem"
           fontSize={[".7em", "md"]}
         >
-          <Box maxW="container.xl" textAlign="center" maxWidth="100%">
+          {/* <Box maxW="container.xl" textAlign="center" maxWidth="100%">
             <Text textAlign="center" width="100%" margin="auto" color="black">
               Use promo code <b>"HOLIDAY"</b> for $50 off.{" "}
               <NextLink href="/book-now" passHref>
@@ -87,7 +86,7 @@ const Header1: React.FC<ChakraProps & ThemingProps> = (props) => {
                 </Link>
               </NextLink>
             </Text>
-          </Box>
+          </Box> */}
         </Container>
       )}
 

@@ -15,6 +15,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 
+import photoBoothRentalFaqQuestions from "../../data/photoBoothRentalFaqQuestions";
 import {
   CityData,
   getAllCitiesData,
@@ -32,6 +33,9 @@ const LazyBookNowSection = dynamic(
 );
 const LazyPricingSection = dynamic(
   () => import("../../src/components/section/pricing"),
+);
+const LazyFAQSection = dynamic(
+  () => import("../../src/components/section/faq"),
 );
 const LazyImage = dynamic(() => import("../../src/components/image"));
 
@@ -155,6 +159,22 @@ const CityPage: React.FC<CityPageProps> = ({ city, citySlug }) => {
             </Text>
           </Box>
           <LazyPricingSection />
+          <Box w="full" px={{ base: 4, md: 8 }}>
+            <Heading
+              as="h2"
+              size="lg"
+              mb={6}
+              textAlign="center"
+              color={textColor}
+            >
+              Frequently Asked Questions
+            </Heading>
+            <LazyFAQSection
+              city={city.name}
+              questions={photoBoothRentalFaqQuestions}
+            />
+          </Box>
+          <Box w="full" h={{ base: 6, md: 10 }} />
           <LazyBookNowSection city={city.name} />
         </VStack>
       </Container>

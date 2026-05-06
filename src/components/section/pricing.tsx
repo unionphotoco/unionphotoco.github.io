@@ -46,7 +46,7 @@ export const PricingSection: React.FC<ChakraProps & ThemingProps> = () => {
             borderTop="1px solid grey"
             borderBottom="1px solid grey"
           >
-            <ListItem mb="1">Starting at $400</ListItem>
+            <ListItem mb="1">Starting at $500</ListItem>
             <ListItem mb="1">24 hour rental</ListItem>
             <ListItem mb="1">Unlimited photo and GIF sessions</ListItem>
             <ListItem mb="1">Instant sharing via Airdrop or QR code</ListItem>
@@ -54,7 +54,7 @@ export const PricingSection: React.FC<ChakraProps & ThemingProps> = () => {
             <ListItem mb="1">
               Online gallery of event photos after 48 hours
             </ListItem>
-            <ListItem mb="1">$150 to secure your date</ListItem>
+            <ListItem mb="1">$200 to secure your date</ListItem>
           </UnorderedList>
           <BookNowButton fullWidth="full" />
         </Box>
@@ -78,7 +78,7 @@ export const PricingSection: React.FC<ChakraProps & ThemingProps> = () => {
             borderTop="1px solid grey"
             borderBottom="1px solid grey"
           >
-            <ListItem mb="1">Starting at $995</ListItem>
+            <ListItem mb="1">Starting at $1095</ListItem>
             <ListItem mb="1">3 hours included</ListItem>
             <ListItem fontWeight="bold" mb="1">
               Studio quality photos and lighting
@@ -95,7 +95,7 @@ export const PricingSection: React.FC<ChakraProps & ThemingProps> = () => {
             <ListItem fontWeight="bold" mb="1">
               Backdrop and props included
             </ListItem>
-            <ListItem mb="1">$150 to secure your date</ListItem>
+            <ListItem mb="1">$200 to secure your date</ListItem>
           </UnorderedList>
           <BookNowButton fullWidth="full" />
         </Box>
@@ -118,7 +118,7 @@ export const PricingSection: React.FC<ChakraProps & ThemingProps> = () => {
             borderTop="1px solid grey"
             borderBottom="1px solid grey"
           >
-            <ListItem mb="1">Starting at $1195</ListItem>
+            <ListItem mb="1">Starting at $1295</ListItem>
             <ListItem fontWeight="bold" mb="1">
               4 hours included
             </ListItem>
@@ -136,7 +136,7 @@ export const PricingSection: React.FC<ChakraProps & ThemingProps> = () => {
             <ListItem fontWeight="bold" mb="1">
               Backdrop and props included
             </ListItem>
-            <ListItem mb="1">$150 to secure your date</ListItem>
+            <ListItem mb="1">$200 to secure your date</ListItem>
           </UnorderedList>
           <BookNowButton fullWidth="full" />
         </Box>

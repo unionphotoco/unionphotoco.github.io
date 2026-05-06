@@ -1,4 +1,4 @@
-import React from "react";
+import { FC } from "react";
 
 import { NextSeo } from "next-seo";
 import NextLink from "next/link";
@@ -18,7 +18,7 @@ import {
 
 import Site from "@definitions/site";
 
-const Home1Page: React.FC = () => {
+const Home1Page: FC = () => {
   return (
     <>
       <NextSeo
@@ -35,7 +35,7 @@ const Home1Page: React.FC = () => {
   );
 };
 
-const MainSlideshow: React.FC = () => {
+const MainSlideshow: FC = () => {
   return (
     <Box
       pos="relative"
