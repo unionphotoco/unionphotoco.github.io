@@ -63,9 +63,14 @@ export default function FAQ({ city = "seattle", questions = [] }: FAQProps) {
         <style>{`
         .faq-section {
           width: 100%;
-          padding: 20px 16px 40px;
+          max-width: 1680px;
+          margin: 0 auto;
+          padding: 16px 40px 40px;
           background: #f6f6f8;
           border-radius: 6px;
+        }
+        @media (max-width: 768px) {
+          .faq-section { padding: 8px 4px 32px; }
         }
         .faq-heading {
           font-size: 1.5rem;

@@ -25,18 +25,10 @@ const MenuItems = [
     title: "Event Gallery",
     target: "_blank",
   },
-  // {
-  //   href: "/lookbook",
-  //   title: "Lookbook",
-  // },
-  // {
-  //   href: "/faqs",
-  //   title: "FAQs",
-  // },
-  // {
-  //   href: "/contact",
-  //   title: "Contact",
-  // },
+  {
+    href: "/blog",
+    title: "Blog",
+  },
   {
     href: "/book-now",
     title: "Book Now",

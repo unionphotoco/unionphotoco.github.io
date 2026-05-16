@@ -10,6 +10,11 @@ export const main = [
     colorScheme: "green",
     target: "_blank",
   },
+  {
+    title: "Blog",
+    href: "/blog",
+    colorScheme: "green",
+  },
   // {
   //   title: "Lookbook",
   //   href: "/lookbook",

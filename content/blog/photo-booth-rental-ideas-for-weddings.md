@@ -1,0 +1,66 @@
+---
+title: "Photo Booth Ideas for Seattle Weddings That Actually Work"
+date: "2025-11-20"
+description: "Seven photo booth ideas built for real Seattle weddings, from Fairmont Olympic ballrooms to Bainbridge barns. Specifics, not slogans."
+author: "Union Photo Co."
+topics: ["weddings", "photo booth"]
+coverImage: "/images/blog/photobooth_002.jpg"
+---
+
+The dusty prop trunk with one fake mustache is over. Here is what couples are loving at Seattle weddings now, with the details that make each one work.
+
+The short version: pick one strong visual idea, match it to your venue, and make the print template a wedding favor people will keep. That is the formula.
+
+### 1. Floral Backdrop, Built for Your Venue
+
+A 6 by 8 foot floral wall photographs better than any branded prop. We have built greenery walls for ballroom weddings near Fairmont Olympic and softer wildflower setups for Bainbridge receptions. Match the color palette to your bouquet, not the wedding website.
+
+Real flowers run 600 to 1,200 dollars from a Seattle florist. High-end faux walls rent for 250 to 450 dollars.
+
+### 2. Custom Print Template
+
+This is the highest-impact decision and the cheapest. Put the couple's names, the date, and the venue on every strip. Add a monogram if you have one. Skip stock fonts.
+
+We design templates in two rounds with one week of lead time. Guests keep these. Generic templates end up on a hotel nightstand.
+
+### 3. Themed Prop Boxes
+
+Generic top-hat-and-glasses kits run out of charm by 8 PM. Build a prop box that matches your story:
+
+- **Capitol Hill loft wedding.** Vintage cameras, vinyl record props, leather jackets.
+- **Bainbridge barn.** Mason jars on lanyards, sunflower headbands, denim accents.
+- **Black tie at the Olympic.** Pearl strands, feather boas, gold speech-bubble signs.
+
+Keep the prop count under 25 items. More than that and your attendant spends the night sorting instead of running the booth.
+
+### 4. GIF and Boomerang Stations
+
+Still photos are the keepsake. GIFs and Boomerangs are the share. We run a separate Boomerang tablet next to the main booth so groups can post to Instagram without holding up the print line.
+
+Plan for two screens minimum at a 150-plus guest event.
+
+### 5. Guestbook Integration
+
+Have guests stick a print into a custom guestbook and write a note next to it. This beats a sign-in book every time. We bring acid-free adhesive squares and ship the finished book to the couple within two weeks of the wedding.
+
+You will reread this book. You will not reread a guestbook signature.
+
+### 6. Outdoor Setups
+
+Open-air booths run outdoors when the forecast is dry. We have set up at Olympic Sculpture Park receptions and private rooftops in SODO. Natural light makes the photos cleaner than any studio strobe.
+
+Plan a tent or covered overhang as backup. Seattle weather is its own line item.
+
+### 7. Late-Night Snack Pairing
+
+Pair the booth with a midnight snack table. Donuts, popcorn, or a small s'mores bar all work. Guests gather around food, so the booth catches the second wave of energy right when dancing slows.
+
+Most caterers can add this for 4 to 7 dollars per guest.
+
+### A Note on Pricing
+
+A staffed open-air booth in Seattle runs 1,200 to 2,000 dollars for 4 hours. Add 300 to 600 dollars for a custom backdrop. Add 150 to 250 for a guestbook bundle. Anything below that range usually means a self-service kiosk, not a real photo booth.
+
+### Tell Us About Your Date
+
+Planning a Seattle wedding and want a photo booth that actually fits your design? Send your date and venue at [Union Photo Co.](https://unionphotoco.com/contact). We will reply within one business day.
