@@ -10,14 +10,14 @@ const PUBLIC_DIR = path.join(ROOT, "public");
 const DATA_DIR = path.join(ROOT, "data");
 const MANIFEST_FILE = path.join(DATA_DIR, "blog-image-manifest.json");
 
-const WIDTHS = [400, 800];
+const WIDTHS = [400, 800, 1200, 1600];
 const QUALITY = 75;
 
 function readCoverImages() {
   if (!fs.existsSync(BLOG_DIR)) return [];
   const seen = new Set();
   fs.readdirSync(BLOG_DIR)
-    .filter((file) => file.endsWith(".md"))
+    .filter((file) => file.endsWith(".mdx"))
     .forEach((file) => {
       const raw = fs.readFileSync(path.join(BLOG_DIR, file), "utf-8");
       const { data } = matter(raw);
@@ -48,8 +48,17 @@ async function generateForCover(coverImage) {
     return null;
   }
 
+  const { width: sourceWidth = 0 } = await sharp(sourceAbs).metadata();
+  const targetWidths = WIDTHS.filter((w) => w < sourceWidth);
+  if (
+    targetWidths.length === 0 ||
+    targetWidths[targetWidths.length - 1] < sourceWidth
+  ) {
+    targetWidths.push(sourceWidth);
+  }
+
   const variants = [];
-  for (const width of WIDTHS) {
+  for (const width of targetWidths) {
     const outRel = variantPath(coverImage, width);
     const outAbs = path.join(PUBLIC_DIR, outRel);
 

@@ -15,9 +15,9 @@ function readAllPosts() {
 
   return fs
     .readdirSync(BLOG_DIR)
-    .filter((file) => file.endsWith(".md"))
+    .filter((file) => file.endsWith(".mdx"))
     .map((file) => {
-      const slug = file.replace(/\.md$/, "");
+      const slug = file.replace(/\.mdx$/, "");
       const raw = fs.readFileSync(path.join(BLOG_DIR, file), "utf-8");
       const { data } = matter(raw);
       return {

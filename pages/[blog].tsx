@@ -1,17 +1,16 @@
 import {
-  BlogPost,
+  BlogPostMeta,
   formatDate,
   getAllPostSlugs,
   getPostBySlug,
   tagToSlug,
 } from "@utils/blog";
 
-import ChakraUIRenderer from "chakra-ui-markdown-renderer";
-import ReactMarkdown from "react-markdown";
-import { Components } from "react-markdown/lib/ast-to-react";
 import remarkGfm from "remark-gfm";
 
 import { GetStaticPaths, GetStaticProps } from "next";
+import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
+import { serialize } from "next-mdx-remote/serialize";
 import { ArticleJsonLd, NextSeo } from "next-seo";
 import NextLink from "next/link";
 
@@ -25,7 +24,6 @@ import {
   Container,
   Divider,
   Heading,
-  Image,
   Link,
   ListItem,
   OrderedList,
@@ -37,11 +35,21 @@ import {
 
 import BookNowSection from "@components/section/booknow";
 
+import imageManifest from "../data/blog-image-manifest.json";
+
+type HeroImageEntry = {
+  fallback: string;
+  webp: { src: string; width: number }[];
+};
+const heroManifest = imageManifest as Record<string, HeroImageEntry>;
+const HERO_SIZES = "(max-width: 992px) 100vw, 960px";
+
 interface BlogPostPageProps {
-  post: BlogPost;
+  post: BlogPostMeta;
+  mdxSource: MDXRemoteSerializeResult;
 }
 
-const BlogPostPage: React.FC<BlogPostPageProps> = ({ post }) => {
+const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, mdxSource }) => {
   const headingColor = useColorModeValue("gray.800", "white");
   const bodyText = useColorModeValue("gray.700", "gray.300");
   const metaText = useColorModeValue("gray.500", "gray.400");
@@ -50,11 +58,8 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ post }) => {
 
   const postUrl = `https://unionphotoco.com/${post.slug}`;
 
-  interface MarkdownDefaults extends Components {
-    heading?: Components["h1"];
-  }
-
-  const markdownTheme: MarkdownDefaults = {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const mdxComponents: Record<string, React.FC<any>> = {
     p: ({ children }) => (
       <Text color={bodyText} fontSize="lg" lineHeight="1.85" mb={5}>
         {children}
@@ -96,17 +101,27 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ post }) => {
         {children}
       </Heading>
     ),
-    a: ({ children, href }) => (
-      <Link
-        href={href}
-        color={headingColor}
-        textDecoration="underline"
-        _hover={{ color: metaText }}
-        isExternal={href?.startsWith("http")}
-      >
-        {children}
-      </Link>
-    ),
+    a: ({ children, href }) => {
+      const isInternal =
+        !!href && (href.startsWith("/") || href.startsWith("#"));
+      const linkProps = {
+        color: headingColor,
+        textDecoration: "underline",
+        _hover: { color: metaText },
+      };
+      if (isInternal && href) {
+        return (
+          <NextLink href={href} passHref legacyBehavior>
+            <Link {...linkProps}>{children}</Link>
+          </NextLink>
+        );
+      }
+      return (
+        <Link href={href} isExternal={href?.startsWith("http")} {...linkProps}>
+          {children}
+        </Link>
+      );
+    },
     ul: ({ children }) => (
       <UnorderedList pl={2} mb={5} spacing={2} color={bodyText} fontSize="lg">
         {children}
@@ -133,32 +148,32 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ post }) => {
         {children}
       </Box>
     ),
-    code: ({ inline, children }) =>
-      inline ? (
-        <Code
-          bg={codeBg}
-          color={headingColor}
-          px={1}
-          borderRadius="sm"
-          fontSize="sm"
-        >
-          {children}
-        </Code>
-      ) : (
-        <Box
-          as="pre"
-          bg={codeBg}
-          p={5}
-          borderRadius="md"
-          overflowX="auto"
-          my={6}
-          fontSize="sm"
-          fontFamily="monospace"
-          color={bodyText}
-        >
-          {children}
-        </Box>
-      ),
+    code: ({ children }) => (
+      <Code
+        bg={codeBg}
+        color={headingColor}
+        px={1}
+        borderRadius="sm"
+        fontSize="sm"
+      >
+        {children}
+      </Code>
+    ),
+    pre: ({ children }) => (
+      <Box
+        as="pre"
+        bg={codeBg}
+        p={5}
+        borderRadius="md"
+        overflowX="auto"
+        my={6}
+        fontSize="sm"
+        fontFamily="monospace"
+        color={bodyText}
+      >
+        {children}
+      </Box>
+    ),
     hr: () => <Divider borderColor={dividerColor} my={10} />,
   };
 
@@ -274,13 +289,33 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ post }) => {
         {post.coverImage && (
           <Box bg={useColorModeValue("white", "gray.900")} pt={[8, 10, 12]}>
             <Container maxW="container.lg" px={[0, 4, 4]}>
-              <Image
-                src={post.coverImage}
-                alt={post.title}
-                w="full"
-                h="auto"
+              <Box
+                as="picture"
+                display="block"
                 borderRadius={[0, "md", "md"]}
-              />
+                overflow="hidden"
+              >
+                {heroManifest[post.coverImage] && (
+                  <source
+                    type="image/webp"
+                    srcSet={heroManifest[post.coverImage].webp
+                      .map((v) => `${v.src} ${v.width}w`)
+                      .join(", ")}
+                    sizes={HERO_SIZES}
+                  />
+                )}
+                <Box
+                  as="img"
+                  src={
+                    heroManifest[post.coverImage]?.fallback ?? post.coverImage
+                  }
+                  alt={post.title}
+                  loading="eager"
+                  decoding="async"
+                  w="full"
+                  h="auto"
+                />
+              </Box>
             </Container>
           </Box>
         )}
@@ -291,13 +326,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ post }) => {
           bg={useColorModeValue("white", "gray.900")}
         >
           <Container maxW="container.md">
-            <ReactMarkdown
-              components={ChakraUIRenderer(markdownTheme)}
-              remarkPlugins={[remarkGfm]}
-              skipHtml
-            >
-              {post.content}
-            </ReactMarkdown>
+            <MDXRemote {...mdxSource} components={mdxComponents} />
           </Container>
         </Box>
         <Container maxW="100%" px={4}>
@@ -322,8 +351,13 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({
   params,
 }) => {
   const slug = params?.blog as string;
-  const post = getPostBySlug(slug);
-  return { props: { post } };
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { content, ...meta } = getPostBySlug(slug);
+  const mdxSource = await serialize(content, {
+    mdxOptions: { remarkPlugins: [remarkGfm] },
+    parseFrontmatter: false,
+  });
+  return { props: { post: meta, mdxSource } };
 };
 
 export default BlogPostPage;

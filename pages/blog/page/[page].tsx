@@ -1,6 +1,11 @@
-import { BlogPostMeta, getAllTags, getPaginatedPosts } from "@utils/blog";
+import {
+  BlogPostMeta,
+  getAllTags,
+  getPaginatedPosts,
+  getTotalPages,
+} from "@utils/blog";
 
-import { GetStaticProps } from "next";
+import { GetStaticPaths, GetStaticProps } from "next";
 import { NextSeo } from "next-seo";
 import NextLink from "next/link";
 
@@ -24,14 +29,14 @@ import {
 import BlogCard from "@components/blog/blog-card";
 import Pagination from "@components/blog/pagination";
 
-interface BlogIndexProps {
+interface BlogPagedProps {
   posts: BlogPostMeta[];
   topics: { tag: string; slug: string }[];
   currentPage: number;
   totalPages: number;
 }
 
-const BlogIndexPage: React.FC<BlogIndexProps> = ({
+const BlogPagedPage: React.FC<BlogPagedProps> = ({
   posts,
   topics,
   currentPage,
@@ -41,15 +46,17 @@ const BlogIndexPage: React.FC<BlogIndexProps> = ({
   const metaText = useColorModeValue("gray.500", "gray.400");
   const bodyText = useColorModeValue("gray.700", "gray.300");
 
+  const canonical = `https://unionphotoco.com/blog/page/${currentPage}`;
+
   return (
     <>
       <NextSeo
-        title="Blog | Photo Booth Tips, Ideas & Inspiration"
+        title={`Blog — Page ${currentPage} | Union Photo Co.`}
         description="Explore photo booth tips, event inspiration, wedding ideas, and behind-the-scenes stories from the Union Photo Co. team."
-        canonical="https://unionphotoco.com/blog"
+        canonical={canonical}
         openGraph={{
-          url: "https://unionphotoco.com/blog",
-          title: "Blog | Union Photo Co.",
+          url: canonical,
+          title: `Blog — Page ${currentPage} | Union Photo Co.`,
           description:
             "Photo booth tips, wedding ideas, corporate event guides, and more from the Union Photo Co. team.",
         }}
@@ -72,9 +79,18 @@ const BlogIndexPage: React.FC<BlogIndexProps> = ({
                   Home
                 </BreadcrumbLink>
               </BreadcrumbItem>
+              <BreadcrumbItem>
+                <BreadcrumbLink
+                  as={NextLink}
+                  href="/blog"
+                  _hover={{ color: headingColor }}
+                >
+                  Blog
+                </BreadcrumbLink>
+              </BreadcrumbItem>
               <BreadcrumbItem isCurrentPage>
                 <Text as="span" color={metaText} fontSize="sm">
-                  Blog
+                  Page {currentPage}
                 </Text>
               </BreadcrumbItem>
             </Breadcrumb>
@@ -98,8 +114,7 @@ const BlogIndexPage: React.FC<BlogIndexProps> = ({
                 maxW="560px"
                 lineHeight="1.5"
               >
-                Tips, inspiration, and behind-the-scenes stories from the Union
-                Photo Co. team.
+                Page {currentPage} of {totalPages}.
               </Text>
             </VStack>
 
@@ -154,22 +169,12 @@ const BlogIndexPage: React.FC<BlogIndexProps> = ({
 
         <Box py={16} bg={useColorModeValue("white", "gray.900")}>
           <Container maxW="container.xl">
-            {posts.length === 0 ? (
-              <VStack spacing={4} py={20} textAlign="center">
-                <Heading size="md" color="gray.500">
-                  No posts yet — check back soon.
-                </Heading>
-              </VStack>
-            ) : (
-              <>
-                <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={8}>
-                  {posts.map((post) => (
-                    <BlogCard key={post.slug} post={post} />
-                  ))}
-                </SimpleGrid>
-                <Pagination currentPage={currentPage} totalPages={totalPages} />
-              </>
-            )}
+            <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={8}>
+              {posts.map((post) => (
+                <BlogCard key={post.slug} post={post} />
+              ))}
+            </SimpleGrid>
+            <Pagination currentPage={currentPage} totalPages={totalPages} />
           </Container>
         </Box>
       </chakra.main>
@@ -177,10 +182,26 @@ const BlogIndexPage: React.FC<BlogIndexProps> = ({
   );
 };
 
-export const getStaticProps: GetStaticProps<BlogIndexProps> = async () => {
-  const { posts, currentPage, totalPages } = getPaginatedPosts(1);
+export const getStaticPaths: GetStaticPaths = async () => {
+  const totalPages = getTotalPages();
+  const paths = [];
+  for (let p = 2; p <= totalPages; p++) {
+    paths.push({ params: { page: String(p) } });
+  }
+  return { paths, fallback: false };
+};
+
+export const getStaticProps: GetStaticProps<BlogPagedProps> = async ({
+  params,
+}) => {
+  const pageNum = Number(params?.page);
+  if (!Number.isFinite(pageNum) || pageNum < 2) return { notFound: true };
+
+  const { posts, currentPage, totalPages } = getPaginatedPosts(pageNum);
+  if (currentPage !== pageNum) return { notFound: true };
+
   const topics = getAllTags();
   return { props: { posts, topics, currentPage, totalPages } };
 };
 
-export default BlogIndexPage;
+export default BlogPagedPage;

@@ -16,12 +16,13 @@ function getBlogSlugs() {
   if (!fs.existsSync(blogDir)) return [];
   return fs
     .readdirSync(blogDir)
-    .filter((file) => file.endsWith(".md"))
-    .map((file) => file.replace(/\.md$/, ""));
+    .filter((file) => file.endsWith(".mdx"))
+    .map((file) => file.replace(/\.mdx$/, ""));
 }
 
 module.exports = {
   siteUrl: "https://unionphotoco.com",
+  sourceDir: "dist",
   generateRobotsTxt: true,
   additionalPaths: async (config) => {
     const result = [];

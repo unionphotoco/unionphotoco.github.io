@@ -3,6 +3,8 @@ import matter from "gray-matter";
 import path from "path";
 
 const BLOG_DIR = path.join(process.cwd(), "content/blog");
+const POST_EXTENSION = ".mdx";
+export const POSTS_PER_PAGE = 6;
 
 export interface BlogPostMeta {
   slug: string;
@@ -22,8 +24,8 @@ export function getAllPostSlugs(): string[] {
   if (!fs.existsSync(BLOG_DIR)) return [];
   return fs
     .readdirSync(BLOG_DIR)
-    .filter((file) => file.endsWith(".md"))
-    .map((file) => file.replace(/\.md$/, ""));
+    .filter((file) => file.endsWith(POST_EXTENSION))
+    .map((file) => file.replace(/\.mdx$/, ""));
 }
 
 export function getAllPosts(): BlogPostMeta[] {
@@ -38,7 +40,10 @@ export function getAllPosts(): BlogPostMeta[] {
 }
 
 export function getPostBySlug(slug: string): BlogPost {
-  const filePath = path.join(BLOG_DIR, `${slug}.md`);
+  const filePath = path.join(BLOG_DIR, `${slug}${POST_EXTENSION}`);
+  if (!fs.existsSync(filePath)) {
+    throw new Error(`Blog post not found for slug "${slug}"`);
+  }
   const fileContent = fs.readFileSync(filePath, "utf-8");
   const { data, content } = matter(fileContent);
 
@@ -84,6 +89,27 @@ export function getAllTags(): { tag: string; slug: string }[] {
     });
   });
   return Array.from(seen.entries()).map(([slug, tag]) => ({ slug, tag }));
+}
+
+export function getTotalPages(): number {
+  const total = getAllPostSlugs().length;
+  return Math.max(1, Math.ceil(total / POSTS_PER_PAGE));
+}
+
+export function getPaginatedPosts(page = 1): {
+  posts: BlogPostMeta[];
+  currentPage: number;
+  totalPages: number;
+} {
+  const all = getAllPosts();
+  const totalPages = Math.max(1, Math.ceil(all.length / POSTS_PER_PAGE));
+  const currentPage = Math.min(Math.max(1, page), totalPages);
+  const start = (currentPage - 1) * POSTS_PER_PAGE;
+  return {
+    posts: all.slice(start, start + POSTS_PER_PAGE),
+    currentPage,
+    totalPages,
+  };
 }
 
 export function getPostsByTagSlug(

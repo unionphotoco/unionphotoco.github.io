@@ -50,7 +50,7 @@ const TopicPage: React.FC<TopicPageProps> = ({ topic, topicSlug, posts }) => {
       />
       <chakra.main>
         <Box bg="#EBE7DE" pt={[24, 24, 28]} pb={[8, 10, 12]}>
-          <Container maxW="container.xl">
+          <Container maxW="container.lg">
             <Breadcrumb
               fontSize="sm"
               color={metaText}
@@ -89,7 +89,7 @@ const TopicPage: React.FC<TopicPageProps> = ({ topic, topicSlug, posts }) => {
 
               <Heading
                 as="h1"
-                fontSize={["4xl", "5xl", "6xl"]}
+                fontSize={["3xl", "4xl", "5xl"]}
                 color={headingColor}
               >
                 {displayTopic}

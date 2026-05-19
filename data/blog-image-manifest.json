@@ -9,6 +9,27 @@
       {
         "src": "/images/blog/photobooth_006-800w.webp",
         "width": 800
+      },
+      {
+        "src": "/images/blog/photobooth_006-1080w.webp",
+        "width": 1080
+      }
+    ]
+  },
+  "/images/blog/photobooth_009.jpg": {
+    "fallback": "/images/blog/photobooth_009.jpg",
+    "webp": [
+      {
+        "src": "/images/blog/photobooth_009-400w.webp",
+        "width": 400
+      },
+      {
+        "src": "/images/blog/photobooth_009-800w.webp",
+        "width": 800
+      },
+      {
+        "src": "/images/blog/photobooth_009-1080w.webp",
+        "width": 1080
       }
     ]
   },
@@ -22,6 +43,78 @@
       {
         "src": "/images/blog/photobooth_001-800w.webp",
         "width": 800
+      },
+      {
+        "src": "/images/blog/photobooth_001-1080w.webp",
+        "width": 1080
+      }
+    ]
+  },
+  "/images/blog/wedding_005.jpg": {
+    "fallback": "/images/blog/wedding_005.jpg",
+    "webp": [
+      {
+        "src": "/images/blog/wedding_005-400w.webp",
+        "width": 400
+      },
+      {
+        "src": "/images/blog/wedding_005-800w.webp",
+        "width": 800
+      },
+      {
+        "src": "/images/blog/wedding_005-1080w.webp",
+        "width": 1080
+      }
+    ]
+  },
+  "/images/blog/wedding_008.jpg": {
+    "fallback": "/images/blog/wedding_008.jpg",
+    "webp": [
+      {
+        "src": "/images/blog/wedding_008-400w.webp",
+        "width": 400
+      },
+      {
+        "src": "/images/blog/wedding_008-800w.webp",
+        "width": 800
+      },
+      {
+        "src": "/images/blog/wedding_008-1080w.webp",
+        "width": 1080
+      }
+    ]
+  },
+  "/images/blog/photobooth_007.jpg": {
+    "fallback": "/images/blog/photobooth_007.jpg",
+    "webp": [
+      {
+        "src": "/images/blog/photobooth_007-400w.webp",
+        "width": 400
+      },
+      {
+        "src": "/images/blog/photobooth_007-800w.webp",
+        "width": 800
+      },
+      {
+        "src": "/images/blog/photobooth_007-1080w.webp",
+        "width": 1080
+      }
+    ]
+  },
+  "/images/blog/wedding_006.jpg": {
+    "fallback": "/images/blog/wedding_006.jpg",
+    "webp": [
+      {
+        "src": "/images/blog/wedding_006-400w.webp",
+        "width": 400
+      },
+      {
+        "src": "/images/blog/wedding_006-800w.webp",
+        "width": 800
+      },
+      {
+        "src": "/images/blog/wedding_006-1080w.webp",
+        "width": 1080
       }
     ]
   },
@@ -35,6 +128,27 @@
       {
         "src": "/images/blog/photobooth_002-800w.webp",
         "width": 800
+      },
+      {
+        "src": "/images/blog/photobooth_002-1080w.webp",
+        "width": 1080
+      }
+    ]
+  },
+  "/images/blog/wedding_003.jpg": {
+    "fallback": "/images/blog/wedding_003.jpg",
+    "webp": [
+      {
+        "src": "/images/blog/wedding_003-400w.webp",
+        "width": 400
+      },
+      {
+        "src": "/images/blog/wedding_003-800w.webp",
+        "width": 800
+      },
+      {
+        "src": "/images/blog/wedding_003-1080w.webp",
+        "width": 1080
       }
     ]
   }
