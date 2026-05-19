@@ -67,11 +67,6 @@ export function formatDate(dateString: string): string {
   });
 }
 
-export function getThumbPath(coverImage: string | null): string | null {
-  if (!coverImage) return null;
-  return coverImage.replace(/(\.[a-z]+)$/i, "-thumb$1");
-}
-
 export function tagToSlug(tag: string): string {
   return tag
     .toLowerCase()

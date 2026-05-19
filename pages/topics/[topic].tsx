@@ -49,55 +49,58 @@ const TopicPage: React.FC<TopicPageProps> = ({ topic, topicSlug, posts }) => {
         }}
       />
       <chakra.main>
-        <Box bg="#EBE7DE" pt={[28, 28, 32]} pb={12}>
+        <Box bg="#EBE7DE" pt={[24, 24, 28]} pb={[8, 10, 12]}>
           <Container maxW="container.xl">
-            <VStack align="start" spacing={4}>
-              <Breadcrumb fontSize="sm" color={metaText} separator="/">
-                <BreadcrumbItem>
-                  <BreadcrumbLink
-                    as={NextLink}
-                    href="/"
-                    _hover={{ color: headingColor }}
-                  >
-                    Home
-                  </BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbItem>
-                  <BreadcrumbLink
-                    as={NextLink}
-                    href="/blog"
-                    _hover={{ color: headingColor }}
-                  >
-                    Blog
-                  </BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbItem isCurrentPage>
-                  <Text as="span" color={metaText} fontSize="sm">
-                    {displayTopic}
-                  </Text>
-                </BreadcrumbItem>
-              </Breadcrumb>
+            <Breadcrumb
+              fontSize="sm"
+              color={metaText}
+              separator="/"
+              mb={[5, 6, 8]}
+            >
+              <BreadcrumbItem>
+                <BreadcrumbLink
+                  as={NextLink}
+                  href="/"
+                  _hover={{ color: headingColor }}
+                >
+                  Home
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbItem>
+                <BreadcrumbLink
+                  as={NextLink}
+                  href="/blog"
+                  _hover={{ color: headingColor }}
+                >
+                  Blog
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbItem isCurrentPage>
+                <Text as="span" color={metaText} fontSize="sm">
+                  {displayTopic}
+                </Text>
+              </BreadcrumbItem>
+            </Breadcrumb>
 
-              <Text
-                fontSize="xs"
-                fontWeight={700}
-                letterSpacing="0.05em"
-                textTransform="uppercase"
-                color={metaText}
-              >
-                Topics
+            <VStack align="start" spacing={3} maxW="900px">
+              <Text fontSize="xs" textTransform="uppercase">
+                Topic
               </Text>
 
               <Heading
                 as="h1"
-                size={["xl", "2xl"]}
+                fontSize={["4xl", "5xl", "6xl"]}
                 color={headingColor}
-                lineHeight="1.25"
               >
                 {displayTopic}
               </Heading>
 
-              <Text fontSize="lg" color={bodyText}>
+              <Text
+                fontSize={["lg", "lg", "xl"]}
+                color={bodyText}
+                maxW="560px"
+                lineHeight="1.5"
+              >
                 {posts.length} {posts.length === 1 ? "post" : "posts"}
               </Text>
             </VStack>

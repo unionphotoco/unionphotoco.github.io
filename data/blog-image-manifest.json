@@ -1,0 +1,41 @@
+{
+  "/images/blog/photobooth_006.jpg": {
+    "fallback": "/images/blog/photobooth_006.jpg",
+    "webp": [
+      {
+        "src": "/images/blog/photobooth_006-400w.webp",
+        "width": 400
+      },
+      {
+        "src": "/images/blog/photobooth_006-800w.webp",
+        "width": 800
+      }
+    ]
+  },
+  "/images/blog/photobooth_001.jpg": {
+    "fallback": "/images/blog/photobooth_001.jpg",
+    "webp": [
+      {
+        "src": "/images/blog/photobooth_001-400w.webp",
+        "width": 400
+      },
+      {
+        "src": "/images/blog/photobooth_001-800w.webp",
+        "width": 800
+      }
+    ]
+  },
+  "/images/blog/photobooth_002.jpg": {
+    "fallback": "/images/blog/photobooth_002.jpg",
+    "webp": [
+      {
+        "src": "/images/blog/photobooth_002-400w.webp",
+        "width": 400
+      },
+      {
+        "src": "/images/blog/photobooth_002-800w.webp",
+        "width": 800
+      }
+    ]
+  }
+}

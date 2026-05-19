@@ -197,7 +197,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ post }) => {
 
       <chakra.main>
         <Box bg="#EBE7DE" pt={[28, 28, 32]} pb={12}>
-          <Container maxW="container.md">
+          <Container maxW="container.lg">
             <VStack align="start" spacing={4}>
               <Breadcrumb fontSize="sm" color={metaText} separator="/">
                 <BreadcrumbItem>

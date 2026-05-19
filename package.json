@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "predev": "node scripts/generate-blog-cache.js && node scripts/generate-blog-thumbnails.js",
     "dev": "next dev",
-    "prebuild": "node scripts/generate-blog-cache.js",
+    "prebuild": "node scripts/generate-blog-cache.js && node scripts/generate-blog-thumbnails.js",
     "build": "cross-env NODE_ENV=production next build",
     "start": "next start",
     "build:analyze": "ANALYZE=true npm run build",

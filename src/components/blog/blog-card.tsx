@@ -1,4 +1,4 @@
-import { BlogPostMeta, getThumbPath, tagToSlug } from "@utils/blog";
+import { BlogPostMeta, tagToSlug } from "@utils/blog";
 
 import NextLink from "next/link";
 import { useRouter } from "next/router";
@@ -7,11 +7,17 @@ import {
   AspectRatio,
   Box,
   Heading,
-  Image,
   Link,
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
+
+import imageManifest from "../../../data/blog-image-manifest.json";
+
+type ImageVariant = { src: string; width: number };
+type ImageEntry = { fallback: string; webp: ImageVariant[] };
+const manifest = imageManifest as Record<string, ImageEntry>;
+const CARD_SIZES = "(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw";
 
 const BlogCard: React.FC<{ post: BlogPostMeta }> = ({ post }) => {
   const router = useRouter();
@@ -23,8 +29,8 @@ const BlogCard: React.FC<{ post: BlogPostMeta }> = ({ post }) => {
   const imageBg = useColorModeValue("gray.100", "gray.700");
 
   const firstTag = post.tags[0];
-  const thumb = getThumbPath(post.coverImage);
   const postHref = `/${post.slug}`;
+  const imageEntry = post.coverImage ? manifest[post.coverImage] : null;
 
   const handleCardClick = (e: React.MouseEvent<HTMLElement>) => {
     const target = e.target as HTMLElement;
@@ -67,14 +73,29 @@ const BlogCard: React.FC<{ post: BlogPostMeta }> = ({ post }) => {
         outlineOffset: "2px",
       }}
     >
-      {thumb && (
-        <AspectRatio ratio={16 / 9} bg={imageBg}>
-          <Image
-            src={thumb}
-            alt={post.title}
-            objectFit="cover"
-            loading="lazy"
-          />
+      {post.coverImage && (
+        <AspectRatio ratio={4 / 3} bg={imageBg}>
+          <Box as="picture" display="block">
+            {imageEntry && (
+              <source
+                type="image/webp"
+                srcSet={imageEntry.webp
+                  .map((v) => `${v.src} ${v.width}w`)
+                  .join(", ")}
+                sizes={CARD_SIZES}
+              />
+            )}
+            <Box
+              as="img"
+              src={imageEntry?.fallback ?? post.coverImage}
+              alt={post.title}
+              loading="lazy"
+              decoding="async"
+              w="100%"
+              h="100%"
+              objectFit="cover"
+            />
+          </Box>
         </AspectRatio>
       )}
 

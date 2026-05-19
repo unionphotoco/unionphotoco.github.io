@@ -47,71 +47,100 @@ const BlogIndexPage: React.FC<BlogIndexProps> = ({ posts, topics }) => {
         }}
       />
       <chakra.main>
-        <Box bg="#EBE7DE" pt={[28, 28, 32]} pb={12}>
+        <Box bg="#EBE7DE" pt={[24, 24, 28]} pb={[8, 10, 12]}>
           <Container maxW="container.xl">
-            <VStack align="start" spacing={4}>
-              <Breadcrumb fontSize="sm" color={metaText} separator="/">
-                <BreadcrumbItem>
-                  <BreadcrumbLink
-                    as={NextLink}
-                    href="/"
-                    _hover={{ color: headingColor }}
-                  >
-                    Home
-                  </BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbItem isCurrentPage>
-                  <Text as="span" color={metaText} fontSize="sm">
-                    Blog
-                  </Text>
-                </BreadcrumbItem>
-              </Breadcrumb>
+            <Breadcrumb
+              fontSize="sm"
+              color={metaText}
+              separator="/"
+              mb={[5, 6, 8]}
+            >
+              <BreadcrumbItem>
+                <BreadcrumbLink
+                  as={NextLink}
+                  href="/"
+                  _hover={{ color: headingColor }}
+                >
+                  Home
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbItem isCurrentPage>
+                <Text as="span" color={metaText} fontSize="sm">
+                  Blog
+                </Text>
+              </BreadcrumbItem>
+            </Breadcrumb>
 
-              <Text
-                fontSize="xs"
-                fontWeight={700}
-                letterSpacing="0.05em"
-                textTransform="uppercase"
-                color={metaText}
-              >
+            <VStack align="start" spacing={3} maxW="900px">
+              <Text fontSize="xs" textTransform="uppercase">
                 From Our Team
               </Text>
 
               <Heading
                 as="h1"
-                size={["xl", "2xl"]}
+                fontSize={["4xl", "5xl", "6xl"]}
                 color={headingColor}
-                lineHeight="1.25"
               >
                 The Blog
               </Heading>
 
-              <Text fontSize="lg" color={bodyText} maxW="540px">
+              <Text
+                fontSize={["lg", "lg", "xl"]}
+                color={bodyText}
+                maxW="560px"
+                lineHeight="1.5"
+              >
                 Tips, inspiration, and behind-the-scenes stories from the Union
                 Photo Co. team.
               </Text>
+            </VStack>
 
-              {topics.length > 0 && (
-                <Wrap spacing={4} pt={1}>
+            {topics.length > 0 && (
+              <Box
+                mt={[6, 8]}
+                pt={[4, 5]}
+                borderTopWidth="1px"
+                borderColor="blackAlpha.200"
+              >
+                <Text
+                  fontSize="xs"
+                  fontWeight={700}
+                  letterSpacing="0.2em"
+                  textTransform="uppercase"
+                  color={metaText}
+                  mb={3}
+                >
+                  Browse by topic
+                </Text>
+                <Wrap spacing={2}>
                   {topics.map(({ tag, slug }) => (
                     <WrapItem key={slug}>
                       <Link
                         as={NextLink}
                         href={`/topics/${slug}`}
-                        fontSize="xs"
-                        fontWeight={700}
-                        letterSpacing="0.05em"
-                        textTransform="uppercase"
-                        color={metaText}
-                        _hover={{ color: headingColor, textDecoration: "none" }}
+                        fontSize="sm"
+                        fontWeight={500}
+                        color={headingColor}
+                        px={3}
+                        py={1}
+                        borderWidth="1px"
+                        borderColor="blackAlpha.300"
+                        borderRadius="full"
+                        transition="all 0.15s"
+                        _hover={{
+                          bg: headingColor,
+                          color: "#EBE7DE",
+                          borderColor: headingColor,
+                          textDecoration: "none",
+                        }}
                       >
                         {tag}
                       </Link>
                     </WrapItem>
                   ))}
                 </Wrap>
-              )}
-            </VStack>
+              </Box>
+            )}
           </Container>
         </Box>
 
