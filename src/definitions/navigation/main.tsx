@@ -4,12 +4,12 @@ export const main = [
     href: "/photo-booth-rentals",
     colorScheme: "green",
   },
-  {
-    title: "Event Gallery",
-    href: "https://unionphotoco.pixieset.com",
-    colorScheme: "green",
-    target: "_blank",
-  },
+  // {
+  //   title: "Event Gallery",
+  //   href: "https://unionphotoco.pixieset.com",
+  //   colorScheme: "green",
+  //   target: "_blank",
+  // },
   {
     title: "Blog",
     href: "/blog",
